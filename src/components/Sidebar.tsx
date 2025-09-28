@@ -48,14 +48,14 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center justify-between p-4 border-b flex-shrink-0">
           <h2 className="text-lg font-semibold gradient-text">Navigation</h2>
           <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8">
             <X className="h-4 w-4" />
           </Button>
         </div>
         
-        <ScrollArea className="flex-1 p-4">
+        <ScrollArea className="h-[calc(100vh-80px)] p-4">
           <nav className="space-y-2">
             {navigationItems.map((item, index) => (
               <Button
