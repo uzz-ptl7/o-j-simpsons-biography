@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -342,12 +343,12 @@ export function MainContent({ searchQuery }: MainContentProps) {
                     </div>
                     <div className="text-center animate-scale-in animate-stagger-1">
                       <Button 
-                        onClick={() => window.location.href = '/trial'}
+                        asChild
                         size="lg"
                         variant="destructive"
                         className="hover:scale-105 transition-transform"
                       >
-                        🔍 View Complete Trial Analysis
+                        <Link to="/trial">🔍 View Complete Trial Analysis</Link>
                       </Button>
                     </div>
                   </div>

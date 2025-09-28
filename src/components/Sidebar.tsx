@@ -7,6 +7,7 @@ interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
   onNavigate: (section: string) => void;
+  isTrialPage?: boolean;
 }
 
 const navigationItems = [
@@ -22,7 +23,21 @@ const navigationItems = [
   { id: "", label: "🔍 Trial Analysis", icon: Gavel, external: true, path: "/trial" },
 ];
 
-export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
+// Trial page navigation items
+const trialNavigationItems = [
+  { id: "hero", label: "🏠 Trial Overview", icon: FileText, external: false },
+  { id: "timeline", label: "⏰ Timeline", icon: Users, external: false },
+  { id: "key-players", label: "👥 Key Players", icon: SearchIcon, external: false },
+  { id: "evidence", label: "🔍 Evidence", icon: Gavel, external: false },
+  { id: "glove-moment", label: "🧤 Glove Moment", icon: Eye, external: false },
+  { id: "verdict", label: "⚖️ Verdict", icon: Gavel, external: false },
+  { id: "legacy", label: "🌟 Cultural Impact", icon: Eye, external: false },
+  { id: "", label: "🏠 Back to Main Story", icon: FileText, external: true, path: "/" },
+];
+
+export function Sidebar({ isOpen, onClose, onNavigate, isTrialPage = false }: SidebarProps) {
+  const currentNavigationItems = isTrialPage ? trialNavigationItems : navigationItems;
+
   const handleNavigate = (item: any) => {
     if (item.external && item.path) {
       window.location.href = item.path;
@@ -57,7 +72,7 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
         
         <ScrollArea className="h-[calc(100vh-80px)] p-4">
           <nav className="space-y-2">
-            {navigationItems.map((item, index) => (
+            {currentNavigationItems.map((item, index) => (
               <Button
                 key={item.id || index}
                 variant="ghost"

@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
-import { CaseStudyContent } from "@/components/CaseStudyContent";
+import { TrialContent } from "@/components/TrialContent";
 import { Footer } from "@/components/Footer";
 import { useState, useEffect } from "react";
 
@@ -41,10 +41,11 @@ const Trial = () => {
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
         onNavigate={handleNavigateToSection}
+        isTrialPage={true}
       />
       
       <main className="relative">
-        <CaseStudyContent searchQuery={searchQuery} />
+        <TrialContent searchQuery={searchQuery} />
         <Footer />
       </main>
     </div>

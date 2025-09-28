@@ -398,6 +398,20 @@ All colors MUST be HSL.
 }
 
 /* Enhanced responsive design */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent section overlap */
+.animate-on-scroll,
+.animate-slide-in,
+.animate-fade-in,
+.animate-scale-in {
+  position: relative;
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .text-5xl {
     font-size: 2.5rem;
