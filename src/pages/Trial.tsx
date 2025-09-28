@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
-import { MainContent } from "@/components/MainContent";
+import { CaseStudyContent } from "@/components/CaseStudyContent";
 import { Footer } from "@/components/Footer";
+import { useState, useEffect } from "react";
 
-const Index = () => {
+const Trial = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -44,11 +44,11 @@ const Index = () => {
       />
       
       <main className="relative">
-        <MainContent searchQuery={searchQuery} />
+        <CaseStudyContent searchQuery={searchQuery} />
         <Footer />
       </main>
     </div>
   );
 };
 
-export default Index;
+export default Trial;

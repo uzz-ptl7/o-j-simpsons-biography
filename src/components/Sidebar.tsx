@@ -10,16 +10,25 @@ interface SidebarProps {
 }
 
 const navigationItems = [
-  { id: "overview", label: "Case Overview", icon: FileText },
-  { id: "people", label: "Key People", icon: Users },
-  { id: "evidence", label: "Evidence", icon: SearchIcon },
-  { id: "trial", label: "The Trial", icon: Gavel },
-  { id: "verdict", label: "Verdict & Analysis", icon: Eye },
+  { id: "hero", label: "🏠 Home", icon: FileText, external: false },
+  { id: "early-life", label: "👶 Early Life", icon: Users, external: false },
+  { id: "football-career", label: "🏈 Football Career", icon: SearchIcon, external: false },
+  { id: "acting-career", label: "🎬 Acting Career", icon: Gavel, external: false },
+  { id: "personal-life", label: "❤️ Personal Life", icon: Eye, external: false },
+  { id: "criminal-trials", label: "⚖️ Criminal Trials", icon: Gavel, external: false },
+  { id: "later-life", label: "📅 Later Life", icon: Eye, external: false },
+  { id: "legacy", label: "🌟 Legacy", icon: Eye, external: false },
+  { id: "fun-facts", label: "🎯 Fun Facts", icon: Eye, external: false },
+  { id: "", label: "🔍 Trial Analysis", icon: Gavel, external: true, path: "/trial" },
 ];
 
 export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
-  const handleNavigate = (sectionId: string) => {
-    onNavigate(sectionId);
+  const handleNavigate = (item: any) => {
+    if (item.external && item.path) {
+      window.location.href = item.path;
+    } else {
+      onNavigate(item.id);
+    }
     onClose();
   };
 
@@ -48,11 +57,11 @@ export function Sidebar({ isOpen, onClose, onNavigate }: SidebarProps) {
         
         <ScrollArea className="flex-1 p-4">
           <nav className="space-y-2">
-            {navigationItems.map((item) => (
+            {navigationItems.map((item, index) => (
               <Button
-                key={item.id}
+                key={item.id || index}
                 variant="ghost"
-                onClick={() => handleNavigate(item.id)}
+                onClick={() => handleNavigate(item)}
                 className="w-full justify-start gap-3 hover-glow"
               >
                 <item.icon className="h-4 w-4" />

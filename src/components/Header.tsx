@@ -24,7 +24,7 @@ export function Header({ onMenuClick, onSearch, searchQuery }: HeaderProps) {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
           <h1 className="text-xl font-bold gradient-text">
-            OJ Simpson Case Study
+            O.J. Simpson: Life & Legacy
           </h1>
         </div>
         
