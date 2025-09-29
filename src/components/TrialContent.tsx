@@ -70,7 +70,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
     <div className="w-full">
       {/* Hero Section */}
       {shouldShowSection("Trial of the Century O.J. Simpson Murder Case") && (
-        <section id="hero" className="section-container text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
+        <section id="hero" className="section-container overflow-hidden text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
           <div className="max-w-4xl px-6">
             <div className="space-y-8">
               <div className="space-y-4">
@@ -109,7 +109,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Timeline Section */}
       {shouldShowSection("Timeline Events Murder Investigation") && (
-        <section id="timeline" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+        <section id="timeline" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -237,7 +237,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Key Players Section */}
       {shouldShowSection("Key Players Simpson Nicole Goldman Defense Prosecution") && (
-        <section id="key-players" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section id="key-players" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -323,7 +323,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Evidence Section */}
       {shouldShowSection("Evidence DNA Blood Gloves Hair Fibers Investigation") && (
-        <section id="evidence" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-destructive/10">
+        <section id="evidence" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-destructive/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -388,7 +388,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Famous Glove Moment Section */}
       {shouldShowSection("Glove Trial Moment If it doesn't fit you must acquit") && (
-        <section id="glove-moment" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/10 to-accent/5">
+        <section id="glove-moment" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -460,7 +460,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Verdict & Analysis Section */}
       {shouldShowSection("Verdict Not Guilty Analysis Controversial Decision") && (
-        <section id="verdict" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-background">
+        <section id="verdict" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-background">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -551,7 +551,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Legacy & Impact Section */}
       {shouldShowSection("Legacy Cultural Impact Media Race Relations Justice System") && (
-        <section id="legacy" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/10 to-primary/5">
+        <section id="legacy" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/10 to-primary/5">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
