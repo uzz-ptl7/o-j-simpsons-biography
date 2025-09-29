@@ -946,59 +946,549 @@ export function MainContent({ searchQuery }: MainContentProps) {
             </Card>
             <div className="flex justify-center mt-8">
               <Button 
-                onClick={() => scrollToSection('later-life')}
+                onClick={() => scrollToSection('civil-trial')}
                 size="lg"
                 className="hover-glow animate-pulse"
               >
-                Next: Later Life 📅 <ChevronDown className="ml-2" />
+                Next: Civil Trial ⚖️ <ChevronDown className="ml-2" />
               </Button>
             </div>
           </div>
         </section>
       )}
 
-      {/* Later Life Section */}
-      {shouldShowSection("Later Life civil trial Las Vegas robbery prison") && (
-        <section id="later-life" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-muted/10 to-secondary/5">
+      {/* Civil Trial Section */}
+      {shouldShowSection("Civil Trial wrongful death lawsuit aftermath") && (
+        <section id="civil-trial" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-muted/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
-                  <Clock className="h-8 w-8" />
-                  {highlightText("Later Life & Death")} 📅
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Clock className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Civil Trial & Wrongful Death Lawsuit")} ⚖️</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  <div className="grid lg:grid-cols-2 gap-6">
-                    <div className="bg-muted/50 p-6 rounded-lg animate-scale-in animate-stagger-1">
-                      <h3 className="text-xl font-semibold mb-4">Civil Trial (1997) 🏛️</h3>
-                      <ul className="space-y-2 text-muted-foreground text-sm">
-                        <li>⚖️ Found liable for wrongful death</li>
-                        <li>💰 Ordered to pay $33.5 million in damages</li>
-                        <li>🔍 Lower burden of proof than criminal trial</li>
-                      </ul>
+              <CardContent className="p-4 sm:p-6">
+                <div className="space-y-6 sm:space-y-8">
+                  
+                  {/* Civil vs Criminal Trial Differences */}
+                  <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-4 sm:p-6 rounded-lg animate-scale-in">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Civil vs Criminal Trial Differences 📊</h3>
+                    <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Criminal Trial (1995) ⚖️</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Standard:</strong> "Beyond reasonable doubt"</li>
+                          <li>• <strong>Burden:</strong> 99% certainty required</li>
+                          <li>• <strong>Result:</strong> Not guilty verdict</li>
+                          <li>• <strong>Consequence:</strong> Freedom from imprisonment</li>
+                          <li>• <strong>Judge:</strong> Lance Ito presiding</li>
+                          <li>• <strong>Jury:</strong> 9 African American, 2 white, 1 Hispanic</li>
+                        </ul>
+                      </div>
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Civil Trial (1997) 🏛️</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Standard:</strong> "Preponderance of evidence"</li>
+                          <li>• <strong>Burden:</strong> 51% certainty required</li>
+                          <li>• <strong>Result:</strong> Found liable for wrongful death</li>
+                          <li>• <strong>Consequence:</strong> Financial damages awarded</li>
+                          <li>• <strong>Judge:</strong> Hiroshi Fujisaki presiding</li>
+                          <li>• <strong>Jury:</strong> 9 white, 1 Hispanic, 1 Asian, 1 African American</li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20 animate-scale-in animate-stagger-2">
-                      <h3 className="text-xl font-semibold mb-4 text-destructive">Legal Troubles Continue 🚨</h3>
-                      <ul className="space-y-2 text-muted-foreground text-sm">
-                        <li>🎰 2008: Las Vegas robbery conviction</li>
-                        <li>⛓️ Sentenced to 33 years in prison</li>
-                        <li>🚪 Granted parole in 2017 after 9 years</li>
-                        <li>💀 Died April 10, 2024, at age 76</li>
-                      </ul>
+                  </div>
+                  
+                  {/* Civil Trial Details */}
+                  <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+                    <div className="space-y-4 sm:space-y-6">
+                      <div className="bg-muted/50 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-1">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Trial Proceedings (1996-1997) 📋</h3>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>📅 <strong>Filed:</strong> August 1994 by Brown and Goldman families</li>
+                          <li>⚖️ <strong>Started:</strong> October 23, 1996</li>
+                          <li>📺 <strong>Coverage:</strong> No cameras allowed in courtroom</li>
+                          <li>🗣️ <strong>Simpson Testimony:</strong> Required to testify (unlike criminal trial)</li>
+                          <li>📸 <strong>Evidence:</strong> Infamous Bruno Magli shoe photos admitted</li>
+                          <li>🩸 <strong>DNA Evidence:</strong> Stronger DNA testimony allowed</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-primary/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-2">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Key Evidence Presented 🔍</h3>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>👟 <strong>Bruno Magli Shoes:</strong> Size 12 bloody footprints at scene</li>
+                          <li>📸 <strong>Photo Evidence:</strong> Simpson wearing identical shoes in 1993</li>
+                          <li>📞 <strong>911 Calls:</strong> Nicole's calls about domestic violence</li>
+                          <li>🏠 <strong>Stalking Evidence:</strong> Simpson following and harassing Nicole</li>
+                          <li>⏰ <strong>Timeline:</strong> Simpson's whereabouts during murder window</li>
+                          <li>🧬 <strong>DNA:</strong> More sophisticated testing than criminal trial</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-col justify-center space-y-4">
+                      <img 
+                        src={ojSimpsonImg} 
+                        alt="O.J. Simpson civil trial"
+                        className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
+                      />
+                      <div className="bg-destructive/20 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold mb-2 text-destructive">Verdict Impact 💥</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
+                          {highlightText("The civil trial verdict was seen as vindication for the victims' families and provided a sense of justice that many felt was lacking from the criminal trial.")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Financial Judgment */}
+                  <div className="bg-gradient-to-r from-destructive/10 to-primary/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-3">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Financial Judgment & Aftermath 💰</h3>
+                    <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">$33.5M</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Total compensatory<br/>and punitive damages</p>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">$12.6M</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Goldman family<br/>awarded amount</p>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">$8.5M</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Simpson children<br/>awarded amount</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 grid md:grid-cols-2 gap-4">
+                      <div className="bg-primary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-2">Asset Protection Efforts 🛡️</h4>
+                        <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
+                          <li>• Moved to Florida for homestead exemption</li>
+                          <li>• Transferred assets to avoid collection</li>
+                          <li>• NFL pension protected from judgment</li>
+                          <li>• Screen Actors Guild pension protected</li>
+                        </ul>
+                      </div>
+                      <div className="bg-secondary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-2">Collection Challenges 💸</h4>
+                        <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
+                          <li>• Families collected less than $1 million</li>
+                          <li>• Simpson declared minimal assets</li>
+                          <li>• Ongoing legal battles over memorabilia</li>
+                          <li>• Interest continues to accrue on judgment</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
+              <Button 
+                onClick={() => scrollToSection('other-criminal-activities')}
+                size="lg"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
+              >
+                Next: Other Criminal Activities 🚨 <ChevronDown className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Other Criminal Activities Section */}
+      {shouldShowSection("Other Criminal Activities Las Vegas robbery kidnapping armed robbery") && (
+        <section id="other-criminal-activities" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-muted/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow border-destructive/20 backdrop-blur-sm bg-background/95">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Gavel className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span className="text-destructive">{highlightText("Other Criminal Activities & Legal Troubles")} 🚨</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6">
+                <div className="space-y-6 sm:space-y-8">
+                  
+                  {/* Road Rage Incident */}
+                  <div className="bg-gradient-to-br from-destructive/10 to-secondary/10 p-4 sm:p-6 rounded-lg border border-destructive/20 animate-scale-in">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-destructive">Road Rage Incident (2001) 🚗</h3>
+                    <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-3 text-destructive">The Incident 💥</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>📅 <strong>Date:</strong> December 4, 2001</li>
+                          <li>📍 <strong>Location:</strong> Miami-Dade County, Florida</li>
+                          <li>🚗 <strong>Victim:</strong> Jeffrey Pattinson, motorist</li>
+                          <li>🤬 <strong>Allegation:</strong> Simpson scratched Pattinson's car with keys</li>
+                          <li>📱 <strong>Claim:</strong> Pattinson was using cell phone while driving</li>
+                          <li>⚖️ <strong>Charges:</strong> Misdemeanor battery and auto burglary</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3 text-destructive">Legal Resolution 📋</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>🤝 <strong>Plea Deal:</strong> No contest to battery charge</li>
+                          <li>📅 <strong>Sentence:</strong> 2 years probation</li>
+                          <li>🏥 <strong>Community Service:</strong> 120 hours ordered</li>
+                          <li>😤 <strong>Anger Management:</strong> Court-ordered counseling</li>
+                          <li>💰 <strong>Fine:</strong> Court costs and fees</li>
+                          <li>🚫 <strong>Pattern:</strong> Continued behavioral issues post-trial</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Satellite TV Piracy */}
+                  <div className="bg-muted/50 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-1">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Satellite TV Piracy Investigation (2001) 📺</h3>
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-2 text-secondary-foreground">The Investigation 🔍</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Issue:</strong> Illegal satellite TV signal theft</li>
+                          <li>• <strong>Equipment:</strong> Modified DirecTV access cards</li>
+                          <li>• <strong>Search:</strong> FBI searched Simpson's Miami home</li>
+                          <li>• <strong>Evidence:</strong> Devices for stealing satellite signals found</li>
+                          <li>• <strong>Scope:</strong> Part of larger federal investigation</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-secondary-foreground">Outcome 📊</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Charges:</strong> No criminal charges filed</li>
+                          <li>• <strong>Civil Penalty:</strong> Settled with DirecTV</li>
+                          <li>• <strong>Amount:</strong> Undisclosed settlement sum</li>
+                          <li>• <strong>Cooperation:</strong> Simpson cooperated with investigation</li>
+                          <li>• <strong>Resolution:</strong> Case closed without prosecution</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Boat Seizure Incident */}
+                  <div className="bg-accent/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-2">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Boat Seizure Incident (2007) ⛵</h3>
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-2 text-accent-foreground">Asset Recovery Attempt 💰</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Asset:</strong> 37-foot yacht "Timeout"</li>
+                          <li>• <strong>Value:</strong> Estimated $130,000</li>
+                          <li>• <strong>Purpose:</strong> Goldman family seeking judgment collection</li>
+                          <li>• <strong>Location:</strong> Docked in Miami marina</li>
+                          <li>• <strong>Legal Action:</strong> Court-ordered seizure attempted</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-accent-foreground">Legal Maneuvering 📜</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Defense:</strong> Claimed boat owned by others</li>
+                          <li>• <strong>Documentation:</strong> Ownership transfer disputes</li>
+                          <li>• <strong>Outcome:</strong> Seizure ultimately unsuccessful</li>
+                          <li>• <strong>Pattern:</strong> Continued asset protection efforts</li>
+                          <li>• <strong>Impact:</strong> Ongoing civil judgment collection issues</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* The Las Vegas Robbery Case */}
+                  <div className="bg-gradient-to-br from-destructive/10 to-primary/10 p-4 sm:p-6 rounded-lg border-2 border-destructive/30 animate-scale-in animate-stagger-3">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-destructive text-center">The Las Vegas Robbery Case (2008) 🎰</h3>
+                    <div className="space-y-4 sm:space-y-6">
+                      
+                      {/* The Crime */}
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">The Crime (September 13, 2007) 🏨</h4>
+                        <div className="grid lg:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-semibold mb-2">What Happened 🎯</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• <strong>Location:</strong> Palace Station Hotel & Casino</li>
+                              <li>• <strong>Target:</strong> Sports memorabilia dealers</li>
+                              <li>• <strong>Claim:</strong> Simpson said items were stolen from him</li>
+                              <li>• <strong>Method:</strong> Armed confrontation in hotel room</li>
+                              <li>• <strong>Accomplices:</strong> 5 other men involved</li>
+                              <li>• <strong>Duration:</strong> Approximately 10 minutes</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-semibold mb-2">Items Allegedly Taken 💎</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• Sports trading cards and photographs</li>
+                              <li>• Signed footballs and jerseys</li>
+                              <li>• Joe Montana lithograph</li>
+                              <li>• Hall of Fame certificate</li>
+                              <li>• Various other memorabilia</li>
+                              <li>• Total value: approximately $100,000</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* The Charges */}
+                      <div className="bg-destructive/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">Criminal Charges Filed ⚖️</h4>
+                        <div className="grid lg:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-semibold mb-2">Primary Charges 📋</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• <strong>Armed Robbery:</strong> 2 counts</li>
+                              <li>• <strong>Kidnapping:</strong> 2 counts</li>
+                              <li>• <strong>Assault with Deadly Weapon:</strong> 2 counts</li>
+                              <li>• <strong>Burglary:</strong> 2 counts</li>
+                              <li>• <strong>Conspiracy:</strong> Multiple counts</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-semibold mb-2">Additional Charges ⚔️</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• Coercion with use of deadly weapon</li>
+                              <li>• Robbery with use of deadly weapon</li>
+                              <li>• Conspiracy to commit robbery</li>
+                              <li>• Conspiracy to commit kidnapping</li>
+                              <li>• Conspiracy to commit burglary</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* The Trial */}
+                      <div className="bg-primary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Trial & Conviction (2008) 🏛️</h4>
+                        <div className="grid lg:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-semibold mb-2">Trial Details 📅</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• <strong>Trial Dates:</strong> September 8 - October 3, 2008</li>
+                              <li>• <strong>Location:</strong> Las Vegas, Nevada</li>
+                              <li>• <strong>Judge:</strong> Jackie Glass presiding</li>
+                              <li>• <strong>Co-defendant:</strong> Clarence Stewart (also convicted)</li>
+                              <li>• <strong>Key Evidence:</strong> Secret audio recordings</li>
+                              <li>• <strong>Verdict Date:</strong> October 3, 2008 (13 years after acquittal)</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-semibold mb-2">Conviction & Sentence ⛓️</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• <strong>Verdict:</strong> Guilty on all 12 counts</li>
+                              <li>• <strong>Sentence:</strong> 9 to 33 years in prison</li>
+                              <li>• <strong>Minimum:</strong> 9 years before parole eligibility</li>
+                              <li>• <strong>Sentencing Date:</strong> December 5, 2008</li>
+                              <li>• <strong>Age at Sentencing:</strong> 61 years old</li>
+                              <li>• <strong>Prison:</strong> Lovelock Correctional Center, Nevada</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Appeals and Parole */}
+                      <div className="bg-secondary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-secondary-foreground">Appeals & Parole 🔄</h4>
+                        <div className="grid lg:grid-cols-2 gap-4">
+                          <div>
+                            <h5 className="font-semibold mb-2">Appeal Attempts 📜</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• Multiple appeal attempts filed</li>
+                              <li>• Claims of ineffective counsel</li>
+                              <li>• Allegations of judicial bias</li>
+                              <li>• All appeals denied by courts</li>
+                              <li>• Nevada Supreme Court rejected final appeal</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h5 className="font-semibold mb-2">Parole Process 🚪</h5>
+                            <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                              <li>• <strong>First Hearing:</strong> July 20, 2017</li>
+                              <li>• <strong>Parole Granted:</strong> Unanimous decision (4-0)</li>
+                              <li>• <strong>Release Date:</strong> October 1, 2017</li>
+                              <li>• <strong>Time Served:</strong> 9 years in prison</li>
+                              <li>• <strong>Conditions:</strong> 5 years parole supervision</li>
+                              <li>• <strong>Restrictions:</strong> No alcohol, weapons, or victim contact</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-6 sm:mt-8">
+              <Button 
+                onClick={() => scrollToSection('death-details')}
+                size="lg"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
+              >
+                Next: Death & Final Years 💀 <ChevronDown className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Death and Final Years Section */}
+      {shouldShowSection("Death final years cancer Las Vegas parole prostate cancer") && (
+        <section id="death-details" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-muted/5 to-destructive/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Clock className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Death & Final Years")} 💀</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6">
+                <div className="space-y-6 sm:space-y-8">
+                  
+                  {/* Life After Parole */}
+                  <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-4 sm:p-6 rounded-lg animate-scale-in">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Life After Parole (2017-2024) 🏠</h3>
+                    <div className="grid lg:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-3 text-primary">Return to Las Vegas 🎰</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>📅 <strong>Release Date:</strong> October 1, 2017 (age 70)</li>
+                          <li>🏠 <strong>Residence:</strong> Las Vegas, Nevada (couldn't leave state)</li>
+                          <li>📱 <strong>Parole Conditions:</strong> GPS monitoring, regular check-ins</li>
+                          <li>🚫 <strong>Restrictions:</strong> No contact with victims' families</li>
+                          <li>💰 <strong>Income:</strong> NFL pension ($25,000/month) and acting residuals</li>
+                          <li>👥 <strong>Social Life:</strong> Limited circle of friends and family</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-3 text-primary">Public Presence 📺</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                          <li>📱 <strong>Twitter Account:</strong> Opened @TheRealOJ32 in 2019</li>
+                          <li>📸 <strong>Social Media:</strong> Posted golf videos and personal updates</li>
+                          <li>🎥 <strong>Documentaries:</strong> Participated in some interviews</li>
+                          <li>🏌️ <strong>Golf:</strong> Frequently played at Las Vegas courses</li>
+                          <li>🎭 <strong>Public Appearances:</strong> Rare but occasionally spotted</li>
+                          <li>🤐 <strong>Media Avoidance:</strong> Generally avoided major interviews</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Health Decline */}
+                  <div className="bg-muted/50 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-1">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Health Decline & Cancer Battle 🏥</h3>
+                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-2 text-secondary-foreground">Cancer Diagnosis 🎗️</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Type:</strong> Prostate cancer</li>
+                          <li>• <strong>Diagnosis:</strong> Approximately 2023 (private initially)</li>
+                          <li>• <strong>Treatment:</strong> Underwent chemotherapy</li>
+                          <li>• <strong>Location:</strong> Las Vegas medical facilities</li>
+                          <li>• <strong>Prognosis:</strong> Advanced stage at diagnosis</li>
+                          <li>• <strong>Family Support:</strong> Children visited regularly</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-secondary-foreground">Health Complications 🩺</h4>
+                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                          <li>• <strong>Age Factor:</strong> 76 years old, advanced age</li>
+                          <li>• <strong>Prison Impact:</strong> Health affected by incarceration</li>
+                          <li>• <strong>Treatment Response:</strong> Cancer did not respond well</li>
+                          <li>• <strong>Mobility Issues:</strong> Used cane and wheelchair</li>
+                          <li>• <strong>Hospitalization:</strong> Multiple hospital stays in final months</li>
+                          <li>• <strong>Palliative Care:</strong> Transition to comfort care</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Death Details */}
+                  <div className="bg-gradient-to-r from-destructive/10 to-muted/10 p-4 sm:p-6 rounded-lg border border-destructive/20 animate-scale-in animate-stagger-2">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-destructive text-center">Death (April 10, 2024) ⚰️</h3>
+                    <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">April 10</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Date of death<br/>2024</p>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">76</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Age at death<br/>Born July 9, 1947</p>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold text-2xl text-destructive mb-2">Las Vegas</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Place of death<br/>Nevada</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 grid md:grid-cols-2 gap-4">
+                      <div className="bg-primary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-2">Circumstances 🏥</h4>
+                        <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
+                          <li>• <strong>Cause:</strong> Metastatic prostate cancer</li>
+                          <li>• <strong>Location:</strong> His Las Vegas home</li>
+                          <li>• <strong>Family Present:</strong> Children by his side</li>
+                          <li>• <strong>Hospice Care:</strong> Under palliative care</li>
+                          <li>• <strong>Duration:</strong> Several months of declining health</li>
+                        </ul>
+                      </div>
+                      <div className="bg-secondary/20 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-2">Family Statement 📢</h4>
+                        <ul className="text-xs sm:text-sm text-muted-foreground space-y-1">
+                          <li>• <strong>Announcement:</strong> Family confirmed death</li>
+                          <li>• <strong>Privacy:</strong> Requested respect for family privacy</li>
+                          <li>• <strong>Children:</strong> Arnelle, Jason, Sydney, and Justin</li>
+                          <li>• <strong>Arrangements:</strong> Private family services</li>
+                          <li>• <strong>Memorial:</strong> No public memorial planned</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Final Legacy and Reactions */}
+                  <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-3">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Reactions to Death & Final Assessment 📰</h3>
+                    <div className="space-y-4">
+                      <div className="grid lg:grid-cols-2 gap-4">
+                        <div className="bg-background/50 p-4 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-accent-foreground">Media Coverage 📺</h4>
+                          <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                            <li>• <strong>News Response:</strong> Major networks covered death</li>
+                            <li>• <strong>Documentaries:</strong> Life retrospectives aired</li>
+                            <li>• <strong>Social Media:</strong> Mixed reactions from public</li>
+                            <li>• <strong>Sports Coverage:</strong> NFL and football media statements</li>
+                            <li>• <strong>Analysis:</strong> Renewed discussions of his legacy</li>
+                          </ul>
+                        </div>
+                        <div className="bg-background/50 p-4 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-accent-foreground">Family Responses 👨‍👩‍👧‍👦</h4>
+                          <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
+                            <li>• <strong>Brown Family:</strong> No public statement</li>
+                            <li>• <strong>Goldman Family:</strong> Brief acknowledgment</li>
+                            <li>• <strong>Simpson Children:</strong> Private mourning</li>
+                            <li>• <strong>Legal Teams:</strong> Respectful statements</li>
+                            <li>• <strong>Former Teammates:</strong> Mixed reactions</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-primary/20 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold mb-2">Complex Legacy 🎭</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
+                          {highlightText("O.J. Simpson died as one of the most controversial figures in American history - a beloved sports hero whose life was forever overshadowed by criminal allegations, legal battles, and a legacy that remains deeply divided between his athletic achievements and personal tragedies.")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button 
                 onClick={() => scrollToSection('legacy')}
                 size="lg"
-                className="hover-glow animate-pulse"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Next: Legacy & Impact 🌟 <ChevronDown className="ml-2" />
+                Next: Legacy & Impact 🌟 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
