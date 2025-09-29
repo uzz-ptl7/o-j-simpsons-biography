@@ -70,7 +70,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
     <div className="w-full">
       {/* Hero Section */}
       {shouldShowSection("Trial of the Century O.J. Simpson Murder Case") && (
-        <section id="hero" className="min-h-screen h-screen flex items-center justify-center text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
+        <section id="hero" className="section-container overflow-hidden text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
           <div className="max-w-4xl px-6">
             <div className="space-y-8">
               <div className="space-y-4">
@@ -109,44 +109,114 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Timeline Section */}
       {shouldShowSection("Timeline Events Murder Investigation") && (
-        <section id="timeline" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+        <section id="timeline" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
                 <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
                   <Clock className="h-8 w-8" />
-                  {highlightText("Critical Timeline")} ⏰
+                  {highlightText("Complete Timeline of Events")} ⏰
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div className="grid lg:grid-cols-2 gap-8">
-                    <div className="space-y-4">
-                      <div className="bg-destructive/10 p-4 rounded-lg border-l-4 border-destructive animate-slide-in-left">
-                        <h4 className="font-semibold text-destructive mb-2">📅 June 12, 1994</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {highlightText("Nicole Brown Simpson and Ronald Goldman brutally murdered outside Nicole's Brentwood condo around 10:15 PM")}
+                <div className="relative">
+                  {/* Timeline line */}
+                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
+                  
+                  <div className="space-y-8">
+                    {/* June 12, 1994 - The Murders */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left">
+                      <div className="w-4 h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-destructive text-lg">June 12, 1994 - 10:15 PM</h4>
+                          <Badge variant="destructive" className="text-xs">💀 MURDERS</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("Nicole Brown Simpson (35) and Ronald Goldman (25) are brutally murdered outside Nicole's Brentwood condominium. Both victims suffer multiple stab wounds.")}
                         </p>
-                      </div>
-                      <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-primary animate-slide-in-left animate-stagger-1">
-                        <h4 className="font-semibold text-primary mb-2">🚗 June 17, 1994</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {highlightText("The infamous white Bronco chase watched by 95 million Americans as O.J. flees from police")}
-                        </p>
-                      </div>
-                      <div className="bg-secondary/10 p-4 rounded-lg border-l-4 border-secondary animate-slide-in-left animate-stagger-2">
-                        <h4 className="font-semibold text-secondary-foreground mb-2">⚖️ January 24, 1995</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {highlightText("Trial begins with unprecedented media coverage and the famous 'Dream Team' defense")}
-                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Nicole's throat slashed, nearly decapitated</li>
+                          <li>• Goldman fought back, defensive wounds on hands</li>
+                          <li>• Blood evidence suggests single killer</li>
+                        </ul>
                       </div>
                     </div>
-                    <div className="flex justify-center">
-                      <img 
-                        src={crimeSceneImg} 
-                        alt="Crime scene investigation"
-                        className="rounded-lg shadow-lg max-w-full h-auto hover:scale-105 transition-transform duration-500 animate-slide-in-right"
-                      />
+
+                    {/* June 13, 1994 - Discovery */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-1">
+                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-primary text-lg">June 13, 1994 - 12:10 AM</h4>
+                          <Badge variant="outline" className="text-xs">🔍 DISCOVERY</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("Bodies discovered by dog walker. Police arrive at scene and begin investigation. O.J. unreachable in Chicago.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Crime scene contaminated by multiple officers</li>
+                          <li>• Bloody glove found at Rockingham estate</li>
+                          <li>• O.J. cut on left hand when questioned</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* June 17, 1994 - Bronco Chase */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-2">
+                      <div className="w-4 h-4 bg-secondary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-secondary/10 p-6 rounded-lg border border-secondary/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-secondary-foreground text-lg">June 17, 1994 - 6:45 PM</h4>
+                          <Badge variant="secondary" className="text-xs">🚗 CHASE</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("Famous white Bronco chase watched by 95 million Americans. O.J. holds gun to his head while Al Cowlings drives, ending at Rockingham.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• $10,000 cash, passport, and disguise found in car</li>
+                          <li>• Suicide note read by Robert Kardashian on TV</li>
+                          <li>• Highest-rated live event in TV history</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* January 24, 1995 - Trial Begins */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
+                      <div className="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-accent/10 p-6 rounded-lg border border-accent/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-accent-foreground text-lg">January 24, 1995</h4>
+                          <Badge variant="outline" className="text-xs">⚖️ TRIAL BEGINS</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("'Trial of the Century' begins with Judge Lance Ito presiding. Cameras allowed in courtroom for unprecedented live coverage.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Dream Team vs. Prosecution begins</li>
+                          <li>• 150+ million viewers tune in daily</li>
+                          <li>• Jury sequestered for 265 days</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* October 3, 1995 - Verdict */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
+                      <div className="w-4 h-4 bg-muted rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-muted/50 p-6 rounded-lg border border-muted/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-muted-foreground text-lg">October 3, 1995 - 10:00 AM</h4>
+                          <Badge variant="outline" className="text-xs">⚖️ VERDICT</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("After just 4 hours of deliberation, jury finds O.J. Simpson NOT GUILTY on all criminal charges. 150 million Americans watch live.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Racial divide in public reaction stark</li>
+                          <li>• Civil trial begins in 1996</li>
+                          <li>• Found liable for wrongful death in civil court</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -167,7 +237,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Key Players Section */}
       {shouldShowSection("Key Players Simpson Nicole Goldman Defense Prosecution") && (
-        <section id="key-players" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section id="key-players" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -253,7 +323,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Evidence Section */}
       {shouldShowSection("Evidence DNA Blood Gloves Hair Fibers Investigation") && (
-        <section id="evidence" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-destructive/10">
+        <section id="evidence" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-destructive/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -318,7 +388,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Famous Glove Moment Section */}
       {shouldShowSection("Glove Trial Moment If it doesn't fit you must acquit") && (
-        <section id="glove-moment" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/10 to-accent/5">
+        <section id="glove-moment" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/10 to-accent/5">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -390,7 +460,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Verdict & Analysis Section */}
       {shouldShowSection("Verdict Not Guilty Analysis Controversial Decision") && (
-        <section id="verdict" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-background">
+        <section id="verdict" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-background">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -481,7 +551,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Legacy & Impact Section */}
       {shouldShowSection("Legacy Cultural Impact Media Race Relations Justice System") && (
-        <section id="legacy" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/10 to-primary/5">
+        <section id="legacy" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/10 to-primary/5">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>

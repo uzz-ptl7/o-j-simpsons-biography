@@ -403,13 +403,29 @@ section {
   z-index: 1;
 }
 
-/* Prevent section overlap */
+/* Prevent section overlap and ensure proper spacing */
+section {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  padding-bottom: 2rem;
+}
+
 .animate-on-scroll,
 .animate-slide-in,
 .animate-fade-in,
 .animate-scale-in {
   position: relative;
   z-index: 1;
+}
+
+/* Fix section heights to prevent overlap */
+.section-container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
 @media (max-width: 768px) {
