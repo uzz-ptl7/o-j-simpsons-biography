@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronDown, Zap, Film, Heart, Gavel, Clock, Trophy, Star, FileText } from "lucide-react";
 import ojSimpsonImg from "@/assets/oj-simpson.jpg";
-import nicoleBrownImg from "@/assets/nicole-brown.jpg";
+import ojSimpsonNflImg from "@/assets/oj-simpson-nfl.jpg";
+import ojSimpsonActingImg from "@/assets/oj-simpson-acting.jpg";
 import coupleImg from "@/assets/couple.jpg";
-import crimeSceneImg from "@/assets/crime-scene.jpg";
-import evidenceImg from "@/assets/evidence.jpg";
+import couple1Img from "@/assets/couple1.jpg";
+import trialImageImg from "@/assets/trialimage.jpg";
 import gloveTrialImg from "@/assets/glove-trial.jpg";
 import bookCoverImg from "@/assets/bookcover.jpg";
 
@@ -377,7 +378,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
                     
                     <div className="flex flex-col justify-center space-y-4">
                       <img 
-                        src={ojSimpsonImg} 
+                        src={ojSimpsonNflImg} 
                         alt="O.J. Simpson NFL career"
                         className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
                       />
@@ -559,7 +560,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
                     
                     <div className="flex flex-col justify-center space-y-4">
                       <img 
-                        src={ojSimpsonImg} 
+                        src={ojSimpsonActingImg} 
                         alt="O.J. Simpson acting career"
                         className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
                       />
@@ -742,14 +743,59 @@ export function MainContent({ searchQuery }: MainContentProps) {
                     <div className="flex flex-col justify-center space-y-4">
                       <img 
                         src={coupleImg} 
-                        alt="O.J. Simpson personal life"
+                        alt="O.J. Simpson with first wife Marguerite Whitley"
                         className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
                       />
-                      <div className="bg-secondary/10 p-4 rounded-lg text-center">
-                        <h4 className="font-semibold mb-2">Family Tragedy 💔</h4>
+                      <div className="bg-primary/10 p-4 rounded-lg text-center">
+                        <h4 className="font-semibold mb-2">First Marriage �</h4>
                         <p className="text-xs sm:text-sm text-muted-foreground">
-                          {highlightText("The drowning death of 23-month-old Aaren in the family pool was a devastating blow that contributed to the strain on Simpson's first marriage.")}
+                          {highlightText("O.J. Simpson with his first wife Marguerite Whitley, whom he married in 1967. Their marriage lasted 12 years and produced three children.")}
                         </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Second Marriage - Nicole Brown Simpson */}
+                  <div className="bg-gradient-to-br from-destructive/5 to-secondary/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-1">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Second Marriage: Nicole Brown Simpson 💔</h3>
+                    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                      <div className="flex flex-col justify-center space-y-4 order-2 lg:order-1">
+                        <img 
+                          src={couple1Img} 
+                          alt="O.J. Simpson with second wife Nicole Brown Simpson"
+                          className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
+                        />
+                        <div className="bg-destructive/20 p-4 rounded-lg text-center">
+                          <h4 className="font-semibold mb-2">Second Marriage (1985-1992) 💔</h4>
+                          <p className="text-xs sm:text-sm text-muted-foreground">
+                            {highlightText("O.J. Simpson with his second wife Nicole Brown Simpson, whom he married in 1985. Their troubled relationship was marked by domestic violence and ended in divorce in 1992.")}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4 order-1 lg:order-2">
+                        <div className="bg-background/50 p-4 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-destructive">Marriage Details 💒</h4>
+                          <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                            <li>💒 <strong>Wedding:</strong> February 2, 1985</li>
+                            <li>🏠 <strong>Location:</strong> Private ceremony in the backyard</li>
+                            <li>👶 <strong>Children:</strong> Sydney (1985), Justin (1988)</li>
+                            <li>⏰ <strong>Duration:</strong> 7 years of marriage</li>
+                            <li>🏡 <strong>Residence:</strong> Brentwood mansion, Los Angeles</li>
+                            <li>🌟 <strong>Lifestyle:</strong> Affluent California social scene</li>
+                          </ul>
+                        </div>
+                        
+                        <div className="bg-background/50 p-4 rounded-lg">
+                          <h4 className="font-semibold mb-3 text-destructive">Growing Problems 🚨</h4>
+                          <ul className="space-y-2 text-muted-foreground text-sm sm:text-base">
+                            <li>🎯 <strong>Control Issues:</strong> Simpson's increasingly possessive behavior</li>
+                            <li>💔 <strong>Infidelity:</strong> Multiple extramarital affairs by Simpson</li>
+                            <li>😡 <strong>Jealousy:</strong> Extreme reactions to Nicole's friendships</li>
+                            <li>🚫 <strong>Isolation:</strong> Attempts to cut Nicole off from family/friends</li>
+                            <li>🏈 <strong>Career Impact:</strong> Post-football identity and ego issues</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -782,34 +828,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Second Marriage */}
-                  <div className="bg-secondary/10 p-4 sm:p-6 rounded-lg animate-scale-in animate-stagger-3">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Second Marriage: Nicole Brown Simpson 💒</h3>
-                    <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-                      <div>
-                        <h4 className="font-semibold mb-2 text-secondary-foreground">Marriage Details 💍</h4>
-                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
-                          <li>• <strong>Wedding Date:</strong> February 2, 1985</li>
-                          <li>• <strong>Location:</strong> Private ceremony in the backyard</li>
-                          <li>• <strong>Children:</strong> Sydney (1985), Justin (1988)</li>
-                          <li>• <strong>Duration:</strong> 7 years of marriage</li>
-                          <li>• <strong>Residence:</strong> Brentwood mansion, Los Angeles</li>
-                          <li>• <strong>Lifestyle:</strong> Affluent California social scene</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-2 text-secondary-foreground">Growing Problems 🚨</h4>
-                        <ul className="space-y-1 text-xs sm:text-sm text-muted-foreground">
-                          <li>• <strong>Control Issues:</strong> Simpson's increasingly possessive behavior</li>
-                          <li>• <strong>Infidelity:</strong> Multiple extramarital affairs by Simpson</li>
-                          <li>• <strong>Jealousy:</strong> Extreme reactions to Nicole's friendships</li>
-                          <li>• <strong>Isolation:</strong> Attempts to cut Nicole off from family/friends</li>
-                          <li>• <strong>Career Impact:</strong> Post-football identity and ego issues</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+
                   
                   {/* Domestic Violence History */}
                   <div className="bg-destructive/10 p-4 sm:p-6 rounded-lg border border-destructive/20 animate-scale-in animate-stagger-4">
@@ -1031,7 +1050,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
                     
                     <div className="flex flex-col justify-center space-y-4">
                       <img 
-                        src={ojSimpsonImg} 
+                        src={trialImageImg} 
                         alt="O.J. Simpson civil trial"
                         className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in mx-auto"
                       />

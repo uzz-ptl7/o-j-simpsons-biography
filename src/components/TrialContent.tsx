@@ -6,10 +6,10 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronDown, Scale, Users, Eye, FileText, AlertTriangle, Gavel, Clock } from "lucide-react";
 import ojSimpsonImg from "@/assets/oj-simpson.jpg";
 import nicoleBrownImg from "@/assets/nicole-brown.jpg";
-import coupleImg from "@/assets/couple.jpg";
-import crimeSceneImg from "@/assets/crime-scene.jpg";
+import ronGoldmanImg from "@/assets/ron-goldman.jpg";
 import evidenceImg from "@/assets/evidence.jpg";
 import gloveTrialImg from "@/assets/glove-trial.jpg";
+import trialImageImg from "@/assets/trialimage.jpg";
 import bookCoverImg from "@/assets/bookcover.jpg";
 
 interface TrialContentProps {
@@ -74,6 +74,13 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
         <section id="hero" className="section-container overflow-hidden text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
           <div className="max-w-4xl px-4 sm:px-6">
             <div className="space-y-6 sm:space-y-8">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={trialImageImg} 
+                  alt="O.J. Simpson trial"
+                  className="rounded-lg shadow-lg max-w-sm h-auto hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text animate-typewriter leading-tight">
                   {highlightText("Trial of the Century")} ⚖️
@@ -145,8 +152,13 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
                       </p>
                     </div>
                   </div>
-                  <div className="bg-accent/10 p-6 rounded-lg animate-scale-in animate-stagger-2 hover-lift">
-                    <h3 className="text-xl font-semibold text-center mb-4">Ronald Goldman 🕊️</h3>
+                  <div className="bg-accent/10 p-6 rounded-lg text-center animate-scale-in animate-stagger-2 hover-lift">
+                    <img 
+                      src={ronGoldmanImg} 
+                      alt="Ronald Goldman"
+                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                    />
+                    <h3 className="text-xl font-semibold text-accent-foreground mb-2">Ronald Goldman 🕊️</h3>
                     <p className="text-sm text-muted-foreground text-center mb-4">
                       {highlightText("25-year-old waiter and aspiring actor who was returning Nicole's mother's sunglasses. Wrong place, wrong time.")}
                     </p>
