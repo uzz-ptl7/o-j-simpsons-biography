@@ -70,7 +70,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
     <div className="w-full">
       {/* Hero Section */}
       {shouldShowSection("O.J. Simpson Life Career Legacy") && (
-        <section id="hero" className="min-h-screen h-screen flex items-center justify-center text-center animate-fade-in bg-gradient-to-br from-background via-primary/5 to-secondary/10">
+        <section id="hero" className="section-container text-center animate-fade-in bg-gradient-to-br from-background via-primary/5 to-secondary/10">
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold gradient-text">
@@ -107,7 +107,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Early Life Section */}
       {shouldShowSection("Early Life childhood born San Francisco") && (
-        <section id="early-life" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+        <section id="early-life" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -155,7 +155,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Football Career Section */}
       {shouldShowSection("Football Career NFL Buffalo Bills USC Heisman Trophy") && (
-        <section id="football-career" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section id="football-career" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -210,7 +210,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Acting Career Section */}
       {shouldShowSection("Acting Career movies films Naked Gun entertainment") && (
-        <section id="acting-career" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-primary/10">
+        <section id="acting-career" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-primary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -261,7 +261,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Personal Life Section */}
       {shouldShowSection("Personal Life marriage Nicole Brown Simpson family") && (
-        <section id="personal-life" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-primary/10">
+        <section id="personal-life" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-primary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -318,7 +318,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Criminal Trials Section */}
       {shouldShowSection("Criminal Trials murder case Nicole Brown Ronald Goldman") && (
-        <section id="criminal-trials" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/10 to-background">
+        <section id="criminal-trials" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/10 to-background">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow border-destructive/20 backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -377,7 +377,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Later Life Section */}
       {shouldShowSection("Later Life civil trial Las Vegas robbery prison") && (
-        <section id="later-life" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-muted/10 to-secondary/5">
+        <section id="later-life" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-muted/10 to-secondary/5">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -425,7 +425,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Legacy Section */}
       {shouldShowSection("Legacy impact society race relations cultural significance") && (
-        <section id="legacy" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-accent/10">
+        <section id="legacy" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
@@ -486,7 +486,7 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Fun Facts Section */}
       {shouldShowSection("Fun Facts trivia interesting statistics records") && (
-        <section id="fun-facts" className="min-h-screen h-screen flex items-center justify-center p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-secondary/10">
+        <section id="fun-facts" className="section-container p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
               <CardHeader>
