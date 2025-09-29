@@ -108,134 +108,6 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
         </section>
       )}
 
-      {/* Timeline Section */}
-      {shouldShowSection("Timeline Events Murder Investigation") && (
-        <section id="timeline" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
-          <div className="max-w-6xl w-full">
-            <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader className="p-4 sm:p-6">
-                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
-                  <Clock className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
-                  <span>{highlightText("Complete Timeline of Events")} ⏰</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6">
-                <div className="relative">
-                  {/* Timeline line */}
-                  <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
-                  
-                  <div className="space-y-6 sm:space-y-8">
-                    {/* June 12, 1994 - The Murders */}
-                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left">
-                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-destructive/10 p-4 sm:p-6 rounded-lg border border-destructive/20 flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
-                          <h4 className="font-bold text-destructive text-sm sm:text-base lg:text-lg">June 12, 1994 - 10:15 PM</h4>
-                          <Badge variant="destructive" className="text-xs w-fit">💀 MURDERS</Badge>
-                        </div>
-                        <p className="text-muted-foreground text-xs sm:text-sm mb-2">
-                          {highlightText("Nicole Brown Simpson (35) and Ronald Goldman (25) are brutally murdered outside Nicole's Brentwood condominium. Both victims suffer multiple stab wounds.")}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          <li>• Nicole's throat slashed, nearly decapitated</li>
-                          <li>• Goldman fought back, defensive wounds on hands</li>
-                          <li>• Blood evidence suggests single killer</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* June 13, 1994 - Discovery */}
-                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-1">
-                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h4 className="font-bold text-primary text-lg">June 13, 1994 - 12:10 AM</h4>
-                          <Badge variant="outline" className="text-xs">🔍 DISCOVERY</Badge>
-                        </div>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {highlightText("Bodies discovered by dog walker. Police arrive at scene and begin investigation. O.J. unreachable in Chicago.")}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          <li>• Crime scene contaminated by multiple officers</li>
-                          <li>• Bloody glove found at Rockingham estate</li>
-                          <li>• O.J. cut on left hand when questioned</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* June 17, 1994 - Bronco Chase */}
-                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-2">
-                      <div className="w-4 h-4 bg-secondary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-secondary/10 p-6 rounded-lg border border-secondary/20 flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h4 className="font-bold text-secondary-foreground text-lg">June 17, 1994 - 6:45 PM</h4>
-                          <Badge variant="secondary" className="text-xs">🚗 CHASE</Badge>
-                        </div>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {highlightText("Famous white Bronco chase watched by 95 million Americans. O.J. holds gun to his head while Al Cowlings drives, ending at Rockingham.")}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          <li>• $10,000 cash, passport, and disguise found in car</li>
-                          <li>• Suicide note read by Robert Kardashian on TV</li>
-                          <li>• Highest-rated live event in TV history</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* January 24, 1995 - Trial Begins */}
-                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
-                      <div className="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-accent/10 p-6 rounded-lg border border-accent/20 flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h4 className="font-bold text-accent-foreground text-lg">January 24, 1995</h4>
-                          <Badge variant="outline" className="text-xs">⚖️ TRIAL BEGINS</Badge>
-                        </div>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {highlightText("'Trial of the Century' begins with Judge Lance Ito presiding. Cameras allowed in courtroom for unprecedented live coverage.")}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          <li>• Dream Team vs. Prosecution begins</li>
-                          <li>• 150+ million viewers tune in daily</li>
-                          <li>• Jury sequestered for 265 days</li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    {/* October 3, 1995 - Verdict */}
-                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
-                      <div className="w-4 h-4 bg-muted rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-muted/50 p-6 rounded-lg border border-muted/20 flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h4 className="font-bold text-muted-foreground text-lg">October 3, 1995 - 10:00 AM</h4>
-                          <Badge variant="outline" className="text-xs">⚖️ VERDICT</Badge>
-                        </div>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {highlightText("After just 4 hours of deliberation, jury finds O.J. Simpson NOT GUILTY on all criminal charges. 150 million Americans watch live.")}
-                        </p>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                          <li>• Racial divide in public reaction stark</li>
-                          <li>• Civil trial begins in 1996</li>
-                          <li>• Found liable for wrongful death in civil court</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <div className="flex justify-center mt-8">
-              <Button 
-                onClick={() => scrollToSection('key-players')}
-                size="lg"
-                className="hover-glow animate-pulse"
-              >
-                Next: Key Players 👥 <ChevronDown className="ml-2" />
-              </Button>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Key Players Section */}
       {shouldShowSection("Key Players Simpson Nicole Goldman Defense Prosecution") && (
         <section id="key-players" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
@@ -854,9 +726,11 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
               </CardHeader>
               <CardContent className="p-4 sm:p-6">
                 <div className="relative">
+                  {/* Timeline line */}
                   <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
                   
                   <div className="space-y-6 sm:space-y-8">
+                    {/* June 12, 1994 - The Murders */}
                     <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left">
                       <div className="w-3 h-3 sm:w-4 sm:h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
                       <div className="bg-destructive/10 p-4 sm:p-6 rounded-lg border border-destructive/20 flex-1">
@@ -865,39 +739,108 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
                           <Badge variant="destructive" className="text-xs w-fit">💀 MURDERS</Badge>
                         </div>
                         <p className="text-muted-foreground text-xs sm:text-sm mb-2">
-                          {highlightText("Nicole Brown Simpson and Ronald Goldman brutally murdered outside Nicole's condo.")}
+                          {highlightText("Nicole Brown Simpson (35) and Ronald Goldman (25) are brutally murdered outside Nicole's Brentwood condominium. Both victims suffer multiple stab wounds.")}
                         </p>
                         <ul className="text-xs text-muted-foreground space-y-1">
                           <li>• Nicole's throat slashed, nearly decapitated</li>
-                          <li>• Goldman fought back, defensive wounds</li>
+                          <li>• Goldman fought back, defensive wounds on hands</li>
                           <li>• Blood evidence suggests single killer</li>
                         </ul>
                       </div>
                     </div>
 
-                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left animate-stagger-1">
-                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-primary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-primary/10 p-4 sm:p-6 rounded-lg border border-primary/20 flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
-                          <h4 className="font-bold text-primary text-sm sm:text-base lg:text-lg">June 13 - Bronco Chase</h4>
-                          <Badge variant="secondary" className="text-xs w-fit">🚗 CHASE</Badge>
+                    {/* June 13, 1994 - Discovery */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-1">
+                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-primary text-lg">June 13, 1994 - 12:10 AM</h4>
+                          <Badge variant="outline" className="text-xs">🔍 DISCOVERY</Badge>
                         </div>
-                        <p className="text-muted-foreground text-xs sm:text-sm">
-                          {highlightText("95 million watch famous chase. O.J. holds gun to head, found with cash, passport, disguise.")}
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("Bodies discovered by dog walker. Police arrive at scene and begin investigation. O.J. unreachable in Chicago.")}
                         </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Crime scene contaminated by multiple officers</li>
+                          <li>• Bloody glove found at Rockingham estate</li>
+                          <li>• Trail of blood leads to front door</li>
+                        </ul>
                       </div>
                     </div>
 
-                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left animate-stagger-2">
-                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-accent/10 p-4 sm:p-6 rounded-lg border border-accent/20 flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
-                          <h4 className="font-bold text-accent-foreground text-sm sm:text-base lg:text-lg">Oct 3, 1995 - NOT GUILTY</h4>
-                          <Badge variant="outline" className="text-xs w-fit">⚖️ VERDICT</Badge>
+                    {/* June 17, 1994 - Bronco Chase */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-2">
+                      <div className="w-4 h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-destructive text-lg">June 17, 1994 - 6:45 PM</h4>
+                          <Badge variant="destructive" className="text-xs">🚗 BRONCO CHASE</Badge>
                         </div>
-                        <p className="text-muted-foreground text-xs sm:text-sm">
-                          {highlightText("After 4 hours deliberation, jury finds Simpson not guilty. 150M Americans watch live.")}
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("The infamous white Bronco chase watched by 95 million Americans. O.J. holds gun to his head while Al Cowlings drives.")}
                         </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• $8,000 cash, passport, and disguise found</li>
+                          <li>• Suicide note discovered at his home</li>
+                          <li>• Surrenders at 8:00 PM at Rockingham</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* January 24, 1995 - Trial Begins */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
+                      <div className="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-accent/10 p-6 rounded-lg border border-accent/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-accent-foreground text-lg">January 24, 1995</h4>
+                          <Badge variant="outline" className="text-xs">⚖️ TRIAL BEGINS</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("Trial of the century begins with opening statements. Media circus reaches fever pitch.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Judge Lance Ito presiding</li>
+                          <li>• Jury selection took 11 weeks</li>
+                          <li>• Trial broadcast live on TV</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* June 15, 1995 - Glove Demonstration */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-4">
+                      <div className="w-4 h-4 bg-secondary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-secondary/10 p-6 rounded-lg border border-secondary/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-secondary-foreground text-lg">June 15, 1995</h4>
+                          <Badge variant="secondary" className="text-xs">🧤 GLOVE MOMENT</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("The infamous \"If it doesn't fit, you must acquit\" moment that changed everything.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Gloves appeared too small</li>
+                          <li>• Prosecution's biggest mistake</li>
+                          <li>• Defense strategy masterpiece</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* October 3, 1995 - Verdict */}
+                    <div className="relative flex items-start space-x-6 animate-slide-in-left animate-stagger-3">
+                      <div className="w-4 h-4 bg-muted rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-muted/50 p-6 rounded-lg border border-muted/20 flex-1">
+                        <div className="flex items-center gap-2 mb-3">
+                          <h4 className="font-bold text-muted-foreground text-lg">October 3, 1995 - 10:00 AM</h4>
+                          <Badge variant="outline" className="text-xs">⚖️ VERDICT</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          {highlightText("After just 4 hours of deliberation, jury finds O.J. Simpson NOT GUILTY on all criminal charges. 150 million Americans watch live.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Racial divide in public reaction stark</li>
+                          <li>• Civil trial begins in 1996</li>
+                          <li>• Found liable for wrongful death in civil court</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
