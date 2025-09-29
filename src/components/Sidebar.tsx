@@ -59,37 +59,37 @@ export function Sidebar({ isOpen, onClose, onNavigate, isTrialPage = false }: Si
       
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 z-50 h-full w-80 bg-background border-r transform transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 z-50 h-full w-72 sm:w-80 bg-background border-r transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b flex-shrink-0">
-          <h2 className="text-lg font-semibold gradient-text">Navigation</h2>
-          <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8">
-            <X className="h-4 w-4" />
+        <div className="flex items-center justify-between p-3 sm:p-4 border-b flex-shrink-0">
+          <h2 className="text-base sm:text-lg font-semibold gradient-text">Navigation</h2>
+          <Button variant="ghost" size="icon" onClick={onClose} className="h-7 w-7 sm:h-8 sm:w-8">
+            <X className="h-3 w-3 sm:h-4 sm:w-4" />
           </Button>
         </div>
         
-        <ScrollArea className="h-[calc(100vh-80px)] p-4">
-          <nav className="space-y-2">
+        <ScrollArea className="h-[calc(100vh-60px)] sm:h-[calc(100vh-80px)] p-3 sm:p-4">
+          <nav className="space-y-1 sm:space-y-2">
             {currentNavigationItems.map((item, index) => (
               <Button
                 key={item.id || index}
                 variant="ghost"
                 onClick={() => handleNavigate(item)}
-                className="w-full justify-start gap-3 hover-glow"
+                className="w-full justify-start gap-2 sm:gap-3 hover-glow h-9 sm:h-10 text-sm"
               >
-                <item.icon className="h-4 w-4" />
-                {item.label}
+                <item.icon className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                <span className="truncate">{item.label}</span>
               </Button>
             ))}
           </nav>
           
-          <Separator className="my-6" />
+          <Separator className="my-4 sm:my-6" />
           
-          <div className="space-y-4">
-            <h3 className="text-sm font-medium text-muted-foreground">Quick Facts</h3>
-            <div className="space-y-2 text-sm">
+          <div className="space-y-3 sm:space-y-4">
+            <h3 className="text-xs sm:text-sm font-medium text-muted-foreground">Quick Facts</h3>
+            <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <p>• Case Date: June 12, 1994</p>
               <p>• Trial Duration: 8 months</p>
               <p>• Verdict: Not Guilty (Criminal)</p>

@@ -71,36 +71,36 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
       {/* Hero Section */}
       {shouldShowSection("Trial of the Century O.J. Simpson Murder Case") && (
         <section id="hero" className="section-container overflow-hidden text-center animate-fade-in bg-gradient-to-br from-destructive/5 via-background to-primary/10">
-          <div className="max-w-4xl px-6">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-bold gradient-text animate-typewriter">
+          <div className="max-w-4xl px-4 sm:px-6">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text animate-typewriter leading-tight">
                   {highlightText("Trial of the Century")} ⚖️
                 </h1>
-                <p className="text-2xl md:text-3xl text-muted-foreground">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground">
                   {highlightText("The O.J. Simpson Murder Case")} 🔍
                 </p>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto px-4">
                   {highlightText("An in-depth analysis of the most watched criminal trial in American history")} 📺
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Badge variant="destructive" className="text-lg px-6 py-3">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 px-4">
+                <Badge variant="destructive" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                   💀 Double Murder
                 </Badge>
-                <Badge variant="outline" className="text-lg px-6 py-3">
+                <Badge variant="outline" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                   📺 150M Viewers
                 </Badge>
-                <Badge variant="secondary" className="text-lg px-6 py-3">
+                <Badge variant="secondary" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                   ⏱️ 8 Month Trial
                 </Badge>
               </div>
               <Button 
                 onClick={() => scrollToSection('timeline')}
                 size="lg" 
-                className="animate-pulse hover:scale-105 transition-transform"
+                className="animate-pulse hover:scale-105 transition-transform h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Begin Analysis <ChevronDown className="ml-2" />
+                Begin Analysis <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -109,30 +109,30 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
 
       {/* Timeline Section */}
       {shouldShowSection("Timeline Events Murder Investigation") && (
-        <section id="timeline" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+        <section id="timeline" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
-                  <Clock className="h-8 w-8" />
-                  {highlightText("Complete Timeline of Events")} ⏰
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Clock className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Complete Timeline of Events")} ⏰</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4 sm:p-6">
                 <div className="relative">
                   {/* Timeline line */}
-                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
+                  <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
                   
-                  <div className="space-y-8">
+                  <div className="space-y-6 sm:space-y-8">
                     {/* June 12, 1994 - The Murders */}
-                    <div className="relative flex items-start space-x-6 animate-slide-in-left">
-                      <div className="w-4 h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
-                      <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20 flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <h4 className="font-bold text-destructive text-lg">June 12, 1994 - 10:15 PM</h4>
-                          <Badge variant="destructive" className="text-xs">💀 MURDERS</Badge>
+                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-destructive/10 p-4 sm:p-6 rounded-lg border border-destructive/20 flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
+                          <h4 className="font-bold text-destructive text-sm sm:text-base lg:text-lg">June 12, 1994 - 10:15 PM</h4>
+                          <Badge variant="destructive" className="text-xs w-fit">💀 MURDERS</Badge>
                         </div>
-                        <p className="text-muted-foreground text-sm mb-2">
+                        <p className="text-muted-foreground text-xs sm:text-sm mb-2">
                           {highlightText("Nicole Brown Simpson (35) and Ronald Goldman (25) are brutally murdered outside Nicole's Brentwood condominium. Both victims suffer multiple stab wounds.")}
                         </p>
                         <ul className="text-xs text-muted-foreground space-y-1">

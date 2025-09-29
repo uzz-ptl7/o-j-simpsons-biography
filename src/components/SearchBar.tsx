@@ -89,48 +89,48 @@ export function SearchBar({ onSearch, searchQuery }: SearchBarProps) {
   };
 
   return (
-    <div ref={searchRef} className="relative max-w-md w-full">
-      <div className="absolute left-3 top-1/2 -translate-y-1/2 z-10">
-        <Search className="h-4 w-4 text-muted-foreground" />
+    <div ref={searchRef} className="relative w-full max-w-xs sm:max-w-md">
+      <div className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-10">
+        <Search className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
       </div>
       <Input
         type="text"
-        placeholder="Search O.J. Simpson content..."
+        placeholder="Search..."
         value={query}
         onChange={(e) => handleSearch(e.target.value)}
         onFocus={() => query.trim() && setShowResults(true)}
-        className="pl-9 pr-9 hover-glow focus:shadow-glow"
+        className="pl-8 sm:pl-9 pr-8 sm:pr-9 text-sm hover-glow focus:shadow-glow h-8 sm:h-10"
       />
       {query && (
         <Button
           variant="ghost"
           size="icon"
           onClick={clearSearch}
-          className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 z-10"
+          className="absolute right-0.5 sm:right-1 top-1/2 -translate-y-1/2 h-6 w-6 sm:h-7 sm:w-7 z-10"
         >
-          <X className="h-3 w-3" />
+          <X className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
         </Button>
       )}
       
       {/* Search Results Dropdown */}
       {showResults && results.length > 0 && (
-        <Card className="absolute top-full left-0 right-0 mt-1 z-50 max-h-80 overflow-y-auto">
-          <div className="p-2">
+        <Card className="absolute top-full left-0 right-0 mt-1 z-50 max-h-60 sm:max-h-80 overflow-y-auto">
+          <div className="p-1 sm:p-2">
             {results.map((result, index) => (
               <div
                 key={index}
                 onClick={() => handleResultClick(result)}
-                className="p-3 hover:bg-accent rounded-md cursor-pointer transition-colors"
+                className="p-2 sm:p-3 hover:bg-accent rounded-md cursor-pointer transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-medium text-sm">{result.section}</div>
-                    <div className="text-xs text-muted-foreground mt-1">
-                      {result.text.substring(0, 60)}...
+                  <div className="min-w-0 flex-1">
+                    <div className="font-medium text-xs sm:text-sm truncate">{result.section}</div>
+                    <div className="text-xs text-muted-foreground mt-1 line-clamp-2 sm:line-clamp-1">
+                      {result.text.substring(0, 40)}...
                     </div>
                   </div>
-                  <div className="text-xs text-primary font-medium">
-                    {result.type === 'trial' ? 'Trial Page' : 'Main Page'}
+                  <div className="text-xs text-primary font-medium ml-2 flex-shrink-0">
+                    {result.type === 'trial' ? 'Trial' : 'Main'}
                   </div>
                 </div>
               </div>

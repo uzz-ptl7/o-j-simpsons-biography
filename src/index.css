@@ -24,10 +24,18 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.75rem;
-    
+
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(221.2 83.2% 53.3%), hsl(262.1 83.3% 57.8%));
-    --gradient-secondary: linear-gradient(135deg, hsl(210 40% 96%), hsl(214.3 31.8% 91.4%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(221.2 83.2% 53.3%),
+      hsl(262.1 83.3% 57.8%)
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(210 40% 96%),
+      hsl(214.3 31.8% 91.4%)
+    );
     --shadow-elegant: 0 10px 30px -10px hsl(221.2 83.2% 53.3% / 0.3);
     --shadow-glow: 0 0 40px hsl(221.2 83.2% 53.3% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -53,10 +61,18 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
-    
+
     /* Custom design tokens for dark mode */
-    --gradient-primary: linear-gradient(135deg, hsl(217.2 91.2% 59.8%), hsl(262.1 83.3% 57.8%));
-    --gradient-secondary: linear-gradient(135deg, hsl(217.2 32.6% 17.5%), hsl(222.2 84% 4.9%));
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(217.2 91.2% 59.8%),
+      hsl(262.1 83.3% 57.8%)
+    );
+    --gradient-secondary: linear-gradient(
+      135deg,
+      hsl(217.2 32.6% 17.5%),
+      hsl(222.2 84% 4.9%)
+    );
     --shadow-elegant: 0 10px 30px -10px hsl(217.2 91.2% 59.8% / 0.3);
     --shadow-glow: 0 0 40px hsl(217.2 91.2% 59.8% / 0.15);
   }
@@ -70,22 +86,22 @@
     @apply bg-background text-foreground;
     transition: var(--transition-smooth);
   }
-  
+
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .card-glow {
     box-shadow: var(--shadow-elegant);
   }
-  
+
   .hover-glow {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
   }
@@ -95,11 +111,11 @@
   .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-in {
     animation: slide-in-up 0.6s ease-out forwards;
   }
-  
+
   .animate-scale-in {
     animation: scale-in 0.4s ease-out forwards;
   }
@@ -245,15 +261,15 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .card-glow {
     box-shadow: var(--shadow-elegant);
   }
-  
+
   .hover-glow {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
     transform: translateY(-2px);
@@ -287,186 +303,354 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 
-/* Enhanced PowerPoint-style animations */
-.animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out;
-}
+  /* Enhanced PowerPoint-style animations */
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
 
-.animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out;
-}
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
 
-.animate-slide-in-up {
-  animation: slideInUp 0.8s ease-out;
-}
+  .animate-slide-in-up {
+    animation: slideInUp 0.8s ease-out;
+  }
 
-.animate-fade-scale {
-  animation: fadeScale 1s ease-out;
-}
+  .animate-fade-scale {
+    animation: fadeScale 1s ease-out;
+  }
 
-.animate-typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typewriter 2s steps(40, end);
-}
+  .animate-typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end);
+  }
 
-@keyframes slideInLeft {
-  from {
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Intersection observer enhancements */
+  .animate-on-scroll {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(50px) scale(0.95);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
+  .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
   }
-}
 
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
+  /* Staggered animations */
+  .animate-stagger-1 {
+    animation-delay: 0.1s;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes fadeScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
+  .animate-stagger-2 {
+    animation-delay: 0.2s;
   }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-@keyframes typewriter {
-  from {
-    width: 0;
+  .animate-stagger-3 {
+    animation-delay: 0.3s;
   }
-  to {
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Enhanced responsive design */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Prevent section overlap and ensure proper spacing */
+  section {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    padding-bottom: 2rem;
+  }
+
+  .animate-on-scroll,
+  .animate-slide-in,
+  .animate-fade-in,
+  .animate-scale-in {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Fix section heights to prevent overlap */
+  .section-container {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  /* Enhanced responsive design */
+  @media (max-width: 768px) {
+    .text-5xl {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    .text-7xl {
+      font-size: 3.5rem;
+      line-height: 1.1;
+    }
+
+    .text-3xl {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+
+    .text-4xl {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+      min-height: 100svh; /* Safari mobile fix */
+    }
+
+    .h-screen {
+      height: 100vh;
+      height: 100svh; /* Safari mobile fix */
+    }
+
+    /* Section container responsive fixes */
+    .section-container {
+      min-height: 80vh;
+      padding: 1.5rem 0;
+    }
+
+    /* Card responsive padding */
+    .card-responsive {
+      padding: 1rem;
+    }
+
+    /* Grid responsive fixes */
+    .grid {
+      gap: 1.5rem;
+    }
+
+    /* Image responsive fixes */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .text-5xl {
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .text-7xl {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+
+    .text-3xl {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .text-4xl {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .gap-8 {
+      gap: 1.5rem;
+    }
+
+    .space-y-6 > * + * {
+      margin-top: 1rem;
+    }
+
+    .space-y-8 > * + * {
+      margin-top: 1.5rem;
+    }
+
+    /* Section container mobile */
+    .section-container {
+      min-height: 70vh;
+      padding: 1rem 0;
+    }
+
+    /* Button responsive sizing */
+    .btn-responsive {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    /* Container responsive padding */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-5xl {
+      font-size: 1.75rem;
+      line-height: 1.1;
+    }
+
+    .text-7xl {
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .text-3xl {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .text-4xl {
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .section-container {
+      min-height: 60vh;
+      padding: 0.75rem 0;
+    }
+
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+
+  /* Line clamp utility for text truncation */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Responsive image fixes */
+  .img-responsive {
     width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
-}
 
-/* Intersection observer enhancements */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(50px) scale(0.95);
-  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+  /* Enhanced responsive grids */
+  @media (max-width: 1024px) {
+    .lg\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
 
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Staggered animations */
-.animate-stagger-1 {
-  animation-delay: 0.1s;
-}
-
-.animate-stagger-2 {
-  animation-delay: 0.2s;
-}
-
-.animate-stagger-3 {
-  animation-delay: 0.3s;
-}
-
-/* Enhanced hover effects */
-.hover-lift {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Enhanced responsive design */
-section {
-  position: relative;
-  z-index: 1;
-}
-
-/* Prevent section overlap and ensure proper spacing */
-section {
-  position: relative;
-  z-index: 1;
-  isolation: isolate;
-  padding-bottom: 2rem;
-}
-
-.animate-on-scroll,
-.animate-slide-in,
-.animate-fade-in,
-.animate-scale-in {
-  position: relative;
-  z-index: 1;
-}
-
-/* Fix section heights to prevent overlap */
-.section-container {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-}
-
-@media (max-width: 768px) {
-  .text-5xl {
-    font-size: 2.5rem;
+    .lg\\:grid-cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-  
-  .text-7xl {
-    font-size: 3.5rem;
-  }
-  
-  .text-3xl {
-    font-size: 1.8rem;
-  }
-  
-  .text-4xl {
-    font-size: 2rem;
-  }
-  
-  .min-h-screen {
-    min-height: 100vh;
-    min-height: 100svh; /* Safari mobile fix */
-  }
-  
-  .h-screen {
-    height: 100vh;
-    height: 100svh; /* Safari mobile fix */
-  }
-}
 
-@media (max-width: 640px) {
-  .p-4 {
-    padding: 1rem;
+  @media (max-width: 768px) {
+    .lg\\:grid-cols-3 {
+      grid-template-columns: 1fr;
+    }
+
+    .md\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
   }
-  
-  .gap-8 {
-    gap: 1.5rem;
+
+  /* Responsive aspect ratios */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
   }
-  
-  .space-y-6 > * + * {
-    margin-top: 1rem;
+
+  @media (max-width: 640px) {
+    .aspect-video {
+      aspect-ratio: 4 / 3;
+    }
   }
-}
 }

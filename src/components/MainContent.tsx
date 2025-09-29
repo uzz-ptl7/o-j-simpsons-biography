@@ -71,35 +71,35 @@ export function MainContent({ searchQuery }: MainContentProps) {
       {/* Hero Section */}
       {shouldShowSection("O.J. Simpson Life Career Legacy") && (
         <section id="hero" className="section-container overflow-hidden text-center animate-fade-in bg-gradient-to-br from-background via-primary/5 to-secondary/10">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold gradient-text">
+          <div className="space-y-6 sm:space-y-8 px-4 sm:px-6">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold gradient-text leading-tight">
                 {highlightText("O.J. Simpson")} ⚡
               </h1>
-              <p className="text-2xl md:text-3xl text-muted-foreground">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground">
                 {highlightText("Life, Career, and Legacy")} 🏈
               </p>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-xl lg:max-w-2xl mx-auto px-4">
                 {highlightText("An educational deep-dive into one of the most controversial figures in American sports and legal history")} 📚
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="outline" className="text-lg px-6 py-3">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 px-4">
+              <Badge variant="outline" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                 🏆 Hall of Fame
               </Badge>
-              <Badge variant="outline" className="text-lg px-6 py-3">
+              <Badge variant="outline" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                 🎬 Actor
               </Badge>
-              <Badge variant="outline" className="text-lg px-6 py-3">
+              <Badge variant="outline" className="text-xs sm:text-sm lg:text-lg px-3 py-1.5 sm:px-4 sm:py-2 lg:px-6 lg:py-3">
                 ⚖️ Trial of the Century
               </Badge>
             </div>
             <Button 
               onClick={() => scrollToSection('early-life')}
               size="lg" 
-              className="animate-pulse hover:scale-105 transition-transform"
+              className="animate-pulse hover:scale-105 transition-transform h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
             >
-              Start Journey <ChevronDown className="ml-2" />
+              Start Journey <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </section>
@@ -107,21 +107,21 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Early Life Section */}
       {shouldShowSection("Early Life childhood born San Francisco") && (
-        <section id="early-life" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+        <section id="early-life" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
-                  <Star className="h-8 w-8" />
-                  {highlightText("Early Life")} 👶
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Star className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Early Life")} 👶</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div className="space-y-6">
-                    <div className="bg-primary/5 p-6 rounded-lg animate-scale-in">
-                      <h3 className="text-xl font-semibold mb-4">Born to Run 🏃‍♂️</h3>
-                      <ul className="space-y-3 text-muted-foreground">
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                  <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+                    <div className="bg-primary/5 p-4 sm:p-6 rounded-lg animate-scale-in">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Born to Run 🏃‍♂️</h3>
+                      <ul className="space-y-2 sm:space-y-3 text-muted-foreground text-sm sm:text-base">
                         <li>📅 Born: July 9, 1947, in San Francisco, California</li>
                         <li>👨‍👩‍👧‍👦 Full name: Orenthal James Simpson</li>
                         <li>🏠 Grew up in the Potrero Hill housing projects</li>
@@ -130,23 +130,23 @@ export function MainContent({ searchQuery }: MainContentProps) {
                       </ul>
                     </div>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center order-1 lg:order-2">
                     <img 
                       src={ojSimpsonImg} 
                       alt="Young O.J. Simpson"
-                      className="rounded-lg shadow-lg max-w-full h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
+                      className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
                     />
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button 
                 onClick={() => scrollToSection('football-career')}
                 size="lg"
-                className="hover-glow animate-pulse"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Next: Football Career 🏈 <ChevronDown className="ml-2" />
+                Next: Football Career 🏈 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -155,36 +155,36 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Football Career Section */}
       {shouldShowSection("Football Career NFL Buffalo Bills USC Heisman Trophy") && (
-        <section id="football-career" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
+        <section id="football-career" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-primary/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
-                  <Zap className="h-8 w-8" />
-                  {highlightText("Football Career")} 🏈
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Zap className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Football Career")} 🏈</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid lg:grid-cols-2 gap-8 items-start">
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
                   <div className="flex justify-center order-2 lg:order-1">
                     <img 
                       src={ojSimpsonImg} 
                       alt="O.J. Simpson football career"
-                      className="rounded-lg shadow-lg max-w-full h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
+                      className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
                     />
                   </div>
-                  <div className="space-y-6 order-1 lg:order-2">
-                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-6 rounded-lg animate-scale-in">
-                      <h3 className="text-xl font-semibold mb-4">College Dominance 🎓</h3>
-                      <ul className="space-y-2 text-muted-foreground">
+                  <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-4 sm:p-6 rounded-lg animate-scale-in">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">College Dominance 🎓</h3>
+                      <ul className="space-y-1.5 sm:space-y-2 text-muted-foreground text-sm sm:text-base">
                         <li>🏆 1968 Heisman Trophy winner at USC</li>
                         <li>⚡ Nicknamed "The Juice" for his explosive speed</li>
                         <li>📊 Set multiple NCAA records</li>
                       </ul>
                     </div>
-                    <div className="bg-gradient-to-br from-secondary/10 to-accent/10 p-6 rounded-lg animate-scale-in">
-                      <h3 className="text-xl font-semibold mb-4">NFL Legend 🌟</h3>
-                      <ul className="space-y-2 text-muted-foreground">
+                    <div className="bg-gradient-to-br from-secondary/10 to-accent/10 p-4 sm:p-6 rounded-lg animate-scale-in">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">NFL Legend 🌟</h3>
+                      <ul className="space-y-1.5 sm:space-y-2 text-muted-foreground text-sm sm:text-base">
                         <li>🦬 Buffalo Bills (1969-1977)</li>
                         <li>🏃‍♂️ First NFL player to rush 2,000 yards (1973)</li>
                         <li>🏆 NFL MVP (1973)</li>
@@ -195,13 +195,13 @@ export function MainContent({ searchQuery }: MainContentProps) {
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button 
                 onClick={() => scrollToSection('acting-career')}
                 size="lg"
-                className="hover-glow animate-pulse"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Next: Acting Career 🎬 <ChevronDown className="ml-2" />
+                Next: Acting Career 🎬 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -210,25 +210,25 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Acting Career Section */}
       {shouldShowSection("Acting Career movies films Naked Gun entertainment") && (
-        <section id="acting-career" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-primary/10">
+        <section id="acting-career" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-primary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
-                  <Film className="h-8 w-8" />
-                  {highlightText("Acting & Entertainment")} 🎬
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Film className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Acting & Entertainment")} 🎬</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div className="space-y-6">
-                    <div className="bg-accent/10 p-6 rounded-lg animate-scale-in">
-                      <h3 className="text-xl font-semibold mb-4">Hollywood Transition 🌟</h3>
-                      <p className="text-muted-foreground mb-4">
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                  <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+                    <div className="bg-accent/10 p-4 sm:p-6 rounded-lg animate-scale-in">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Hollywood Transition 🌟</h3>
+                      <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
                         {highlightText("After retiring from football, O.J. seamlessly transitioned into acting and became a household name in Hollywood")} 🎭
                       </p>
-                      <h4 className="font-semibold mb-2">Major Films 🎥</h4>
-                      <ul className="space-y-2 text-muted-foreground">
+                      <h4 className="font-semibold mb-2 text-sm sm:text-base">Major Films 🎥</h4>
+                      <ul className="space-y-1.5 sm:space-y-2 text-muted-foreground text-sm sm:text-base">
                         <li>🔥 The Towering Inferno (1974)</li>
                         <li>📺 Roots (1977) - TV miniseries</li>
                         <li>😂 The Naked Gun trilogy (1988-1994)</li>
@@ -236,23 +236,23 @@ export function MainContent({ searchQuery }: MainContentProps) {
                       </ul>
                     </div>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center order-1 lg:order-2">
                     <img 
                       src={ojSimpsonImg} 
                       alt="O.J. Simpson acting career"
-                      className="rounded-lg shadow-lg max-w-full h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
+                      className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
                     />
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button 
                 onClick={() => scrollToSection('personal-life')}
                 size="lg"
-                className="hover-glow animate-pulse"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Next: Personal Life ❤️ <ChevronDown className="ml-2" />
+                Next: Personal Life ❤️ <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -486,54 +486,54 @@ export function MainContent({ searchQuery }: MainContentProps) {
 
       {/* Fun Facts Section */}
       {shouldShowSection("Fun Facts trivia interesting statistics records") && (
-        <section id="fun-facts" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-secondary/10">
+        <section id="fun-facts" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-accent/5 to-secondary/10">
           <div className="max-w-6xl w-full">
             <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
-              <CardHeader>
-                <CardTitle className="text-3xl lg:text-4xl gradient-text text-center">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text text-center">
                   {highlightText("Fun Facts & Trivia")} 🎯
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid lg:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="bg-primary/10 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-1">
-                      <h4 className="font-semibold text-primary mb-2">🏃‍♂️ Speed Demon</h4>
-                      <p className="text-sm text-muted-foreground">Ran a 4.4-second 40-yard dash in college</p>
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="bg-primary/10 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-1">
+                      <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">🏃‍♂️ Speed Demon</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Ran a 4.4-second 40-yard dash in college</p>
                     </div>
-                    <div className="bg-secondary/10 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-2">
-                      <h4 className="font-semibold text-primary mb-2">🎬 Hollywood Star</h4>
-                      <p className="text-sm text-muted-foreground">Starred in over 20 movies and TV shows</p>
+                    <div className="bg-secondary/10 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-2">
+                      <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">🎬 Hollywood Star</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Starred in over 20 movies and TV shows</p>
                     </div>
-                    <div className="bg-accent/10 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-3">
-                      <h4 className="font-semibold text-primary mb-2">💰 Commercial Success</h4>
-                      <p className="text-sm text-muted-foreground">Famous Hertz rental car spokesperson</p>
+                    <div className="bg-accent/10 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-3">
+                      <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">💰 Commercial Success</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Famous Hertz rental car spokesperson</p>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="bg-muted/50 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-1">
-                      <h4 className="font-semibold text-primary mb-2">📊 Record Breaker</h4>
-                      <p className="text-sm text-muted-foreground">First to rush 2,000+ yards in 14-game season</p>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="bg-muted/50 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-1">
+                      <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">📊 Record Breaker</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">First to rush 2,000+ yards in 14-game season</p>
                     </div>
-                    <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-2">
-                      <h4 className="font-semibold text-primary mb-2">📺 TV Ratings</h4>
-                      <p className="text-sm text-muted-foreground">Trial watched by 150 million viewers</p>
+                    <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-2">
+                      <h4 className="font-semibold text-primary mb-2 text-sm sm:text-base">📺 TV Ratings</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Trial watched by 150 million viewers</p>
                     </div>
-                    <div className="bg-destructive/10 p-4 rounded-lg hover-lift animate-scale-in animate-stagger-3">
-                      <h4 className="font-semibold text-destructive mb-2">🚗 Chase History</h4>
-                      <p className="text-sm text-muted-foreground">White Bronco chase interrupted NBA Finals</p>
+                    <div className="bg-destructive/10 p-3 sm:p-4 rounded-lg hover-lift animate-scale-in animate-stagger-3">
+                      <h4 className="font-semibold text-destructive mb-2 text-sm sm:text-base">🚗 Chase History</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">White Bronco chase interrupted NBA Finals</p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6 sm:mt-8">
               <Button 
                 onClick={() => scrollToSection('references')}
                 size="lg"
-                className="hover-glow animate-pulse"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
-                Final Section: References 📚 <ChevronDown className="ml-2" />
+                Final Section: References 📚 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
