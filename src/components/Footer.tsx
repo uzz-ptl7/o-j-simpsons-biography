@@ -6,7 +6,7 @@ export function Footer() {
           © 2025 O.J. Simpson Educational Project. All rights reserved. 
           <br className="sm:hidden" />
           <span className="block sm:inline mt-1 sm:mt-0">
-            Created for educational purposes by a <span><a href="https://www.sitecraftersz.co/" className="underline hover:text-primary transition-colors">Sitecrafter.</a></span>
+            Created for educational purposes. Hosted and Powered by <span><a href="https://www.sitecraftersz.co/" className="underline hover:text-primary transition-colors">sitecrafters</a></span>
           </span>
         </p>
       </div>

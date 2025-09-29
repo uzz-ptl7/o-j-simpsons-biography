@@ -10,6 +10,7 @@ import coupleImg from "@/assets/couple.jpg";
 import crimeSceneImg from "@/assets/crime-scene.jpg";
 import evidenceImg from "@/assets/evidence.jpg";
 import gloveTrialImg from "@/assets/glove-trial.jpg";
+import bookCoverImg from "@/assets/bookcover.jpg";
 
 interface TrialContentProps {
   searchQuery: string;
@@ -96,7 +97,7 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
                 </Badge>
               </div>
               <Button 
-                onClick={() => scrollToSection('timeline')}
+                onClick={() => scrollToSection('key-players')}
                 size="lg" 
                 className="animate-pulse hover:scale-105 transition-transform h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
               >
@@ -606,6 +607,400 @@ export function TrialContent({ searchQuery }: TrialContentProps) {
                       <h3 className="text-xl font-semibold mb-4 text-center">Lasting Questions 🤔</h3>
                       <p className="text-muted-foreground text-center text-sm">
                         {highlightText("Nearly 30 years later, the case continues to divide opinions and raise questions about celebrity justice, racial bias, media influence, and the effectiveness of the American legal system.")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-8">
+              <Button 
+                onClick={() => scrollToSection('controversial-book')}
+                size="lg"
+                className="hover-glow animate-pulse"
+              >
+                Next: The Controversial Book 📖 <ChevronDown className="ml-2" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* The Controversial Book Section */}
+      {shouldShowSection("Controversial Book If I Did It hypothetical confession Goldman family") && (
+        <section id="controversial-book" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-accent/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow border-destructive/20 backdrop-blur-sm bg-background/95">
+              <CardHeader>
+                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
+                  <FileText className="h-8 w-8" />
+                  <span className="text-destructive">{highlightText("'If I Did It' - The Controversial Book")} 📖</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-8">
+                  
+                  {/* Book Overview */}
+                  <div className="bg-gradient-to-br from-destructive/10 to-primary/10 p-6 rounded-lg border border-destructive/20 animate-scale-in">
+                    <h3 className="text-2xl font-semibold mb-6 text-destructive text-center">A Publishing Scandal That Shocked the World 📚</h3>
+                    <div className="grid lg:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-semibold mb-4 text-destructive text-lg">The Original Deal (2006) 💰</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm">
+                          <li>📖 <strong>Title:</strong> "If I Did It: Confessions of the Killer"</li>
+                          <li>💵 <strong>Advance:</strong> $600,000 from ReganBooks/HarperCollins</li>
+                          <li>📺 <strong>TV Deal:</strong> Fox interview special planned</li>
+                          <li>🎭 <strong>Format:</strong> Simpson's "hypothetical" account of murders</li>
+                          <li>⚠️ <strong>Reality:</strong> Widely seen as thinly veiled confession</li>
+                          <li>🚫 <strong>Fate:</strong> Cancelled after massive public outcry</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-4 text-destructive text-lg">Goldman Family Takeover (2007) ⚖️</h4>
+                        <ul className="space-y-2 text-muted-foreground text-sm">
+                          <li>👨‍⚖️ <strong>Legal Action:</strong> Court awarded rights to Goldman family</li>
+                          <li>📖 <strong>Published Version:</strong> Modified title emphasizing confession</li>
+                          <li>✏️ <strong>Added Content:</strong> Goldman family commentary and analysis</li>
+                          <li>📈 <strong>Sales:</strong> Became bestseller despite controversy</li>
+                          <li>🎯 <strong>Purpose:</strong> Expose Simpson's guilt and collect damages</li>
+                          <li>💡 <strong>Impact:</strong> Renewed focus on evidence and trial</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Book Cover, Reading Link & Simpson's Purpose */}
+                  <div className="grid lg:grid-cols-2 gap-8 items-start animate-scale-in animate-stagger-1">
+                    <div className="flex justify-center order-2 lg:order-1">
+                      <div className="space-y-4">
+                        <img 
+                          src={bookCoverImg} 
+                          alt="If I Did It book cover"
+                          className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
+                        />
+                        <div className="bg-destructive/20 p-4 rounded-lg text-center">
+                          <h4 className="font-semibold mb-2 text-destructive">New York Times Bestseller 📚</h4>
+                          <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+                            {highlightText("Over 325,000 copies sold! The Ron Goldman Foundation for Justice Authorized Version")}
+                          </p>
+                          <Button 
+                            asChild
+                            className="w-full bg-destructive hover:bg-destructive/90 text-white"
+                            size="lg"
+                          >
+                            <a 
+                              href="https://www.oocities.org/garrettwilke/ojsiidi.pdf" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-2"
+                            >
+                              📖 Read the Book Online (PDF)
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6 order-1 lg:order-2">
+                      <div className="bg-primary/10 p-6 rounded-lg">
+                        <h4 className="font-semibold mb-4 text-primary text-xl">Simpson's Stated Purpose for Writing 📝</h4>
+                        <div className="space-y-3">
+                          <p className="text-muted-foreground text-sm">
+                            {highlightText("According to Simpson and his representatives, he wrote the book for several reasons:")}
+                          </p>
+                          <ul className="space-y-2 text-muted-foreground text-sm">
+                            <li>💰 <strong>Financial Motivation:</strong> Simpson faced mounting legal debts and the $33.5 million civil judgment</li>
+                            <li>🗣️ <strong>Public Response:</strong> Claimed he wanted to address ongoing speculation about his guilt</li>
+                            <li>🎭 <strong>Hypothetical Exercise:</strong> Insisted it was purely fictional speculation, not a confession</li>
+                            <li>⚖️ <strong>Legal Strategy:</strong> Maintained innocence while exploring "what if" scenarios</li>
+                            <li>📺 <strong>Media Attention:</strong> Sought to capitalize on continued public fascination with the case</li>
+                            <li>💔 <strong>Personal Vindication:</strong> Attempted to control narrative around his involvement</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20">
+                        <h4 className="font-semibold mb-4 text-destructive text-xl">The Real Purpose: Expert Analysis 🔍</h4>
+                        <div className="space-y-3">
+                          <p className="text-muted-foreground text-sm">
+                            {highlightText("Legal and psychological experts believe Simpson's true motivations were:")}
+                          </p>
+                          <ul className="space-y-2 text-muted-foreground text-sm">
+                            <li>🧠 <strong>Psychological Relief:</strong> Narcissistic need to confess while maintaining plausible deniability</li>
+                            <li>🎯 <strong>Control Narrative:</strong> Shape public perception of events before his death</li>
+                            <li>💸 <strong>Profit from Notoriety:</strong> Monetize his infamy one final time</li>
+                            <li>😏 <strong>Ego Gratification:</strong> Boast about "perfect crime" without legal consequences</li>
+                            <li>🔥 <strong>Attention Seeking:</strong> Return to center of media spotlight</li>
+                            <li>⚡ <strong>Power Play:</strong> Demonstrate control over victims' families and justice system</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-secondary/10 p-6 rounded-lg">
+                        <h4 className="font-semibold mb-4 text-secondary-foreground text-xl">Book Content Summary 📚</h4>
+                        <div className="space-y-3">
+                          <ul className="space-y-2 text-muted-foreground text-sm">
+                            <li>📄 <strong>256 Pages:</strong> Simpson's "hypothetical" account + Goldman family commentary</li>
+                            <li>🕰️ <strong>Timeline:</strong> Detailed recreation of June 12, 1994 murder night</li>
+                            <li>👤 <strong>"Charlie" Character:</strong> Mysterious accomplice who supposedly did the killing</li>
+                            <li>🏠 <strong>Crime Scene Details:</strong> Information only the killer could possess</li>
+                            <li>🧬 <strong>Forensic Elements:</strong> Blood patterns, weapon descriptions, escape routes</li>
+                            <li>💬 <strong>Goldman Commentary:</strong> Family's analysis exposing contradictions and lies</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Key Revelations */}
+                  <div className="bg-muted/50 p-6 rounded-lg animate-scale-in animate-stagger-1">
+                    <h3 className="text-xl font-semibold mb-6 text-center">Shocking "Hypothetical" Details 🔍</h3>
+                    <div className="grid lg:grid-cols-3 gap-6">
+                      <div className="bg-background/70 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">Crime Scene Knowledge 🏠</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>• Detailed layout of Nicole's condo</li>
+                          <li>• Exact positions where bodies found</li>
+                          <li>• Knowledge of security and lighting</li>
+                          <li>• Timing and escape route details</li>
+                        </ul>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">The Mysterious "Charlie" 👤</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>• Claimed accomplice never identified</li>
+                          <li>• Convenient scapegoat for violence</li>
+                          <li>• No evidence such person existed</li>
+                          <li>• Allowed Simpson to minimize culpability</li>
+                        </ul>
+                      </div>
+                      <div className="bg-background/70 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">Forensic Accuracy 🧬</h4>
+                        <ul className="text-sm text-muted-foreground space-y-1">
+                          <li>• Blood spatter patterns described</li>
+                          <li>• Weapon details matching evidence</li>
+                          <li>• Timeline matching prosecution theory</li>
+                          <li>• Details not public during trial</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Expert Analysis */}
+                  <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg animate-scale-in animate-stagger-2">
+                    <h3 className="text-xl font-semibold mb-6 text-center">Legal Expert Analysis 👨‍⚖️</h3>
+                    <div className="grid lg:grid-cols-2 gap-6">
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Why Experts Consider It a Confession 📋</h4>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li>• <strong>Impossible Knowledge:</strong> Details only killer could know</li>
+                          <li>• <strong>Forensic Accuracy:</strong> Matched crime scene evidence exactly</li>
+                          <li>• <strong>Timeline Precision:</strong> Fit prosecution's murder timeline</li>
+                          <li>• <strong>Psychological Patterns:</strong> Classic guilty behavior</li>
+                          <li>• <strong>Legal Opinion:</strong> Prosecutors called it "confession disguised as fiction"</li>
+                        </ul>
+                      </div>
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Publishing Ethics Debate 📚</h4>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li>• <strong>Blood Money:</strong> Profiting from murder victims</li>
+                          <li>• <strong>Public Interest:</strong> Truth vs. exploitation</li>
+                          <li>• <strong>Victim Rights:</strong> Families' suffering vs. information</li>
+                          <li>• <strong>Legal Precedent:</strong> Can victims' families control narrative?</li>
+                          <li>• <strong>Media Responsibility:</strong> Where to draw ethical lines</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Cultural Impact */}
+                  <div className="bg-accent/10 p-6 rounded-lg animate-scale-in animate-stagger-3">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Lasting Cultural Impact 🌍</h3>
+                    <div className="bg-primary/20 p-4 rounded-lg text-center">
+                      <p className="text-muted-foreground text-sm mb-4">
+                        {highlightText("The book became a cultural phenomenon, providing what many considered the closest thing to a confession the public would ever receive. Legal scholars use it in courses on evidence and ethics, while it remains a symbol of how celebrity, media, and justice intersect in modern America.")}
+                      </p>
+                      <Badge variant="destructive" className="text-lg px-6 py-3">
+                        💀 "The Confession That Wasn't a Confession"
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-8">
+              <Button 
+                onClick={() => scrollToSection('timeline')}
+                size="lg"
+                className="hover-glow animate-pulse"
+              >
+                Next: Timeline of Events ⏰ <ChevronDown className="ml-2" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Timeline Section - Moved to End */}
+      {shouldShowSection("Timeline Events Murder Investigation") && (
+        <section id="timeline" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-secondary/5 to-accent/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow backdrop-blur-sm bg-background/95">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <Clock className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span>{highlightText("Complete Timeline of Events")} ⏰</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6">
+                <div className="relative">
+                  <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-destructive animate-slide-in-up"></div>
+                  
+                  <div className="space-y-6 sm:space-y-8">
+                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-destructive rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-destructive/10 p-4 sm:p-6 rounded-lg border border-destructive/20 flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
+                          <h4 className="font-bold text-destructive text-sm sm:text-base lg:text-lg">June 12, 1994 - 10:15 PM</h4>
+                          <Badge variant="destructive" className="text-xs w-fit">💀 MURDERS</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-xs sm:text-sm mb-2">
+                          {highlightText("Nicole Brown Simpson and Ronald Goldman brutally murdered outside Nicole's condo.")}
+                        </p>
+                        <ul className="text-xs text-muted-foreground space-y-1">
+                          <li>• Nicole's throat slashed, nearly decapitated</li>
+                          <li>• Goldman fought back, defensive wounds</li>
+                          <li>• Blood evidence suggests single killer</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left animate-stagger-1">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-primary rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-primary/10 p-4 sm:p-6 rounded-lg border border-primary/20 flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
+                          <h4 className="font-bold text-primary text-sm sm:text-base lg:text-lg">June 13 - Bronco Chase</h4>
+                          <Badge variant="secondary" className="text-xs w-fit">🚗 CHASE</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-xs sm:text-sm">
+                          {highlightText("95 million watch famous chase. O.J. holds gun to head, found with cash, passport, disguise.")}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="relative flex items-start space-x-4 sm:space-x-6 animate-slide-in-left animate-stagger-2">
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-accent rounded-full border-4 border-background shadow-lg flex-shrink-0 z-10"></div>
+                      <div className="bg-accent/10 p-4 sm:p-6 rounded-lg border border-accent/20 flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:mb-3">
+                          <h4 className="font-bold text-accent-foreground text-sm sm:text-base lg:text-lg">Oct 3, 1995 - NOT GUILTY</h4>
+                          <Badge variant="outline" className="text-xs w-fit">⚖️ VERDICT</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-xs sm:text-sm">
+                          {highlightText("After 4 hours deliberation, jury finds Simpson not guilty. 150M Americans watch live.")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-8">
+              <Button 
+                onClick={() => scrollToSection('personal-analysis')}
+                size="lg"
+                className="hover-glow animate-pulse"
+              >
+                Next: Personal Analysis 🤔 <ChevronDown className="ml-2" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Personal Analysis Section */}
+      {shouldShowSection("Personal Analysis O.J. Simpson guilt evidence opinion") && (
+        <section id="personal-analysis" className="section-container overflow-hidden p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-muted/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow border-destructive/20 backdrop-blur-sm bg-background/95">
+              <CardHeader>
+                <CardTitle className="text-3xl lg:text-4xl gradient-text flex items-center gap-3">
+                  <FileText className="h-8 w-8" />
+                  <span className="text-destructive">{highlightText("Personal Analysis: Did O.J. Simpson Commit the Murders?")} 🤔</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-8">
+                  
+                  <div className="bg-destructive/10 p-6 rounded-lg border border-destructive/20 animate-scale-in">
+                    <h3 className="text-2xl font-semibold mb-6 text-destructive text-center">The Evidence Points to Guilt �</h3>
+                    <div className="space-y-6">
+                      <p className="text-muted-foreground text-center mb-6">
+                        {highlightText("After examining all evidence, the conclusion is clear: O.J. Simpson almost certainly committed these murders.")}
+                      </p>
+                      
+                      <div className="grid lg:grid-cols-2 gap-6">
+                        <div className="bg-background/50 p-6 rounded-lg">
+                          <h4 className="font-semibold mb-4 text-destructive text-xl">Physical Evidence 🧬</h4>
+                          <ul className="space-y-2 text-muted-foreground text-sm">
+                            <li>• <strong>DNA:</strong> His blood at crime scene (1 in 170M chance not his)</li>
+                            <li>• <strong>Victims' Blood:</strong> In his car, home, on socks</li>
+                            <li>• <strong>Hair & Fibers:</strong> Matching Simpson on victims</li>
+                            <li>• <strong>Shoe Prints:</strong> Rare Bruno Magli, his size</li>
+                            <li>• <strong>Fresh Cut:</strong> Unexplained hand injury</li>
+                          </ul>
+                        </div>
+                        
+                        <div className="bg-background/50 p-6 rounded-lg">
+                          <h4 className="font-semibold mb-4 text-destructive text-xl">Behavioral Evidence 🎭</h4>
+                          <ul className="space-y-2 text-muted-foreground text-sm">
+                            <li>• <strong>Violence History:</strong> Documented domestic abuse</li>
+                            <li>• <strong>Stalking:</strong> Following Nicole before murder</li>
+                            <li>• <strong>Flight Attempt:</strong> Cash, passport, disguise</li>
+                            <li>• <strong>"If I Did It":</strong> Details only killer knew</li>
+                            <li>• <strong>No Alibi:</strong> Can't account for murder time</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-primary/10 p-6 rounded-lg animate-scale-in animate-stagger-1">
+                    <h3 className="text-xl font-semibold mb-6 text-center">Why Criminal Jury Got It Wrong vs Civil Got It Right ⚖️</h3>
+                    <div className="grid lg:grid-cols-2 gap-6">
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-destructive">Criminal Trial Issues 📉</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          <li>• Racial context (post-Rodney King)</li>
+                          <li>• LAPD credibility destroyed</li>
+                          <li>• "Race card" defense strategy</li>
+                          <li>• Glove demonstration theatrics</li>
+                          <li>• 99% certainty standard too high</li>
+                        </ul>
+                      </div>
+                      <div className="bg-background/50 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">Civil Trial Success ✅</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          <li>• 51% evidence standard</li>
+                          <li>• More diverse, educated jury</li>
+                          <li>• No cameras = focus on evidence</li>
+                          <li>• Simpson forced to testify</li>
+                          <li>• Bruno Magli photos admitted</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-accent/10 p-6 rounded-lg animate-scale-in animate-stagger-2">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Final Conclusion 🎯</h3>
+                    <div className="bg-destructive/20 p-6 rounded-lg text-center">
+                      <p className="text-muted-foreground text-lg mb-4">
+                        {highlightText("Based on physical evidence, behavioral patterns, and his own 'hypothetical' confession, there is no reasonable doubt O.J. Simpson committed these murders.")}
+                      </p>
+                      <Badge variant="destructive" className="text-lg px-6 py-3">
+                        💀 Guilty Beyond Reasonable Doubt
+                      </Badge>
+                      <p className="text-sm text-muted-foreground mt-4">
+                        The criminal trial was a miscarriage of justice, but the civil trial and evidence tell the truth.
                       </p>
                     </div>
                   </div>

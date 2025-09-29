@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown, Zap, Film, Heart, Gavel, Clock, Trophy, Star } from "lucide-react";
+import { ChevronDown, Zap, Film, Heart, Gavel, Clock, Trophy, Star, FileText } from "lucide-react";
 import ojSimpsonImg from "@/assets/oj-simpson.jpg";
 import nicoleBrownImg from "@/assets/nicole-brown.jpg";
 import coupleImg from "@/assets/couple.jpg";
 import crimeSceneImg from "@/assets/crime-scene.jpg";
 import evidenceImg from "@/assets/evidence.jpg";
 import gloveTrialImg from "@/assets/glove-trial.jpg";
+import bookCoverImg from "@/assets/bookcover.jpg";
 
 interface MainContentProps {
   searchQuery: string;
@@ -1313,6 +1314,108 @@ export function MainContent({ searchQuery }: MainContentProps) {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-6 sm:mt-8">
+              <Button 
+                onClick={() => scrollToSection('controversial-book')}
+                size="lg"
+                className="hover-glow animate-pulse h-10 sm:h-11 lg:h-12 px-6 sm:px-8"
+              >
+                Next: The Controversial Book 📖 <ChevronDown className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* The Controversial Book Section */}
+      {shouldShowSection("Controversial Book If I Did It hypothetical confession publisher") && (
+        <section id="controversial-book" className="section-container overflow-hidden p-3 sm:p-4 lg:p-8 animate-on-scroll bg-gradient-to-br from-destructive/5 to-accent/10">
+          <div className="max-w-6xl w-full">
+            <Card className="card-glow hover-glow border-destructive/20 backdrop-blur-sm bg-background/95">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-2xl sm:text-3xl lg:text-4xl gradient-text flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+                  <FileText className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 flex-shrink-0" />
+                  <span className="text-destructive">{highlightText("'If I Did It' - The Controversial Book")} 📖</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6">
+                <div className="space-y-6 sm:space-y-8">
+                  
+                  {/* Book Cover and Overview */}
+                  <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center animate-scale-in">
+                    <div className="flex justify-center order-2 lg:order-1">
+                      <div className="space-y-4">
+                        <img 
+                          src={bookCoverImg} 
+                          alt="If I Did It book cover"
+                          className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto hover:scale-105 transition-transform duration-500 animate-slide-in"
+                        />
+                        <div className="bg-destructive/20 p-4 rounded-lg text-center">
+                          <h4 className="font-semibold mb-2 text-destructive">New York Times Bestseller 📚</h4>
+                          <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+                            {highlightText("Over 325,000 copies sold! Goldman Foundation Authorized")}
+                          </p>
+                          <Button 
+                            asChild
+                            className="w-full bg-destructive hover:bg-destructive/90 text-white"
+                            size="lg"
+                          >
+                            <a 
+                              href="https://www.oocities.org/garrettwilke/ojsiidi.pdf" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-2"
+                            >
+                              📖 Read the Book Online (PDF)
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-4 order-1 lg:order-2">
+                      <div className="bg-primary/10 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-primary">The Controversial Deal �</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          <li>• $600,000 advance from ReganBooks (2006)</li>
+                          <li>• "Hypothetical" account of murders</li>
+                          <li>• Cancelled after massive public outcry</li>
+                          <li>• Goldman family seized rights (2007)</li>
+                          <li>• Published with family commentary</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-destructive/10 p-4 rounded-lg border border-destructive/20">
+                        <h4 className="font-semibold mb-3 text-destructive">Why Experts Call It a Confession �</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          <li>• Details only killer could know</li>
+                          <li>• Accurate crime scene descriptions</li>
+                          <li>• Timeline matches prosecution theory</li>
+                          <li>• Forensic knowledge beyond public info</li>
+                        </ul>
+                      </div>
+                      
+                      <div className="bg-secondary/10 p-4 rounded-lg">
+                        <h4 className="font-semibold mb-3 text-secondary-foreground">Simpson's Stated Purpose �</h4>
+                        <ul className="space-y-1 text-muted-foreground text-sm">
+                          <li>• Financial motivation ($33.5M debt)</li>
+                          <li>• Address public speculation</li>
+                          <li>• Control narrative before death</li>
+                          <li>• Maintain innocence while confessing</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-accent/10 p-4 rounded-lg text-center animate-scale-in animate-stagger-1">
+                    <h4 className="font-semibold mb-2">Legal Legacy �</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      {highlightText("The book remains the closest thing to a confession the public ever received, used in law schools and considered a key document in American legal history.")}
+                    </p>
                   </div>
                 </div>
               </CardContent>
